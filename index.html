@@ -1243,7 +1243,9 @@ window.addEventListener('scroll',()=>{document.getElementById('sp').style.width=
 // LOADER
 const lines=document.querySelectorAll('#lc .lline'),lf=document.getElementById('lf'),lp=document.getElementById('lp');
 lines.forEach((l,i)=>setTimeout(()=>{l.style.cssText='opacity:1;transform:none;transition:all .4s ease';},i*180));
-let p=0;const iv=setInterval(()=>{p+=1.6;lf.style.width=p+'%';lp.textContent=Math.floor(p)+'%';if(p>=100){clearInterval(iv);setTimeout(()=>{const lo=document.getElementById('loader');lo.style.cssText='opacity:0;transition:opacity .6s ease';setTimeout(()=>lo.style.display='none',620);},350);}},22);
+let p=0;const iv=setInterval(()=>{p+=5;lf.style.width=p+'%';lp.textContent=Math.floor(p)+'%';if(p>=100){clearInterval(iv);setTimeout(()=>{const lo=document.getElementById('loader');lo.style.cssText='opacity:0;transition:opacity .4s ease';setTimeout(()=>lo.style.display='none',420);},200);}},16);
+// Safety fallback — force hide loader after 3s no matter what
+setTimeout(()=>{const lo=document.getElementById('loader');if(lo&&lo.style.display!=='none'){lo.style.cssText='opacity:0;transition:opacity .3s ease';setTimeout(()=>lo.style.display='none',320);}},3000);
 
 // REVEAL
 const ro=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');ro.unobserve(e.target);}});},{threshold:.07});
