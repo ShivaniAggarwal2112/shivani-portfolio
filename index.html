@@ -431,7 +431,16 @@ footer a{color:var(--teal);text-decoration:none;}
 <div id="cd"></div><div id="cr"></div><div id="sp"></div>
 
 <!-- LOADER -->
-
+<div id="loader">
+  <div class="lc" id="lc">
+    <div class="lline">initialising <span class="lg">SHIVANI.A</span> · portfolio</div>
+    <div class="lline">✓ loading <span class="lg">CFA Level I</span> · ESG · SASB · Financial Modelling</div>
+    <div class="lline">✓ loading <span class="lg">Azure Databricks</span> · Unity Catalog · Delta Lake</div>
+    <div class="lline">✓ loading <span class="lg">DOH Abu Dhabi</span> · PHI · Population Health Intelligence</div>
+    <div class="lline">✓ loading <span class="lg">LangChain</span> · RAG · Agentic AI · LangGraph</div>
+    <div class="lline">✓ <span class="lg">EY LLP</span> · Fidelity · ESG Carbon · ArcelorMittal Belgium</div>
+    <div class="lline">ready.</div>
+  </div>
   <div class="lbar"><div class="lfill" id="lf"></div></div>
   <div class="lpct" id="lp">0%</div>
 </div>
@@ -1231,12 +1240,13 @@ document.querySelectorAll('a,button,.pc,.sec-cell,.cert-card,.gov-card,.tcard').
 // SCROLL PROGRESS
 window.addEventListener('scroll',()=>{document.getElementById('sp').style.width=(window.scrollY/(document.body.scrollHeight-innerHeight)*100)+'%';});
 
-// LOADER
+// LOADER — runs fast, hides on window.onload
 const lines=document.querySelectorAll('#lc .lline'),lf=document.getElementById('lf'),lp=document.getElementById('lp');
-lines.forEach((l,i)=>setTimeout(()=>{l.style.cssText='opacity:1;transform:none;transition:all .4s ease';},i*180));
-let p=0;const iv=setInterval(()=>{p+=5;lf.style.width=p+'%';lp.textContent=Math.floor(p)+'%';if(p>=100){clearInterval(iv);setTimeout(()=>{const lo=document.getElementById('loader');lo.style.cssText='opacity:0;transition:opacity .4s ease';setTimeout(()=>lo.style.display='none',420);},200);}},16);
-// Safety fallback — force hide loader after 3s no matter what
-setTimeout(()=>{const lo=document.getElementById('loader');if(lo&&lo.style.display!=='none'){lo.style.cssText='opacity:0;transition:opacity .3s ease';setTimeout(()=>lo.style.display='none',320);}},3000);
+lines.forEach((l,i)=>setTimeout(()=>{l.style.cssText='opacity:1;transform:none;transition:all .4s ease';},i*120));
+const hideLoader=()=>{const lo=document.getElementById('loader');if(!lo||lo.style.display==='none')return;lo.style.cssText='opacity:0;transition:opacity .5s ease';setTimeout(()=>lo.style.display='none',520);};
+let p=0;const iv=setInterval(()=>{p+=3;if(p>90)p=90;lf.style.width=p+'%';lp.textContent=Math.floor(p)+'%';},30);
+window.addEventListener('load',()=>{clearInterval(iv);lf.style.width='100%';lp.textContent='100%';setTimeout(hideLoader,300);});
+setTimeout(hideLoader,4000);,3000);
 
 // REVEAL
 const ro=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');ro.unobserve(e.target);}});},{threshold:.07});
