@@ -41,7 +41,7 @@ body::before{content:'';position:fixed;inset:0;background:repeating-linear-gradi
 #sp{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--teal),var(--blue));z-index:1000;width:0;}
 
 /* ─── LOADER ─────────────────────────────────────────────── */
-#loader{position:fixed;inset:0;background:var(--bg);z-index:9000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem;}
+#loader{display:none!important;position:fixed;inset:0;background:var(--bg);z-index:9000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem;}
 .lcode{font-family:var(--mono);font-size:.78rem;color:var(--text-3);width:460px;max-width:90vw;line-height:2.1;}
 .lline{opacity:0;transform:translateX(-8px);}
 .lh{color:var(--teal);}.lg{color:var(--gold);}.lb{color:var(--blue);}
@@ -431,16 +431,7 @@ footer a{color:var(--teal);text-decoration:none;}
 <div id="cd"></div><div id="cr"></div><div id="sp"></div>
 
 <!-- LOADER -->
-<div id="loader">
-  <div class="lcode" id="lc">
-    <div class="lline">$ <span class="lh">initializing</span> portfolio.config.js ...</div>
-    <div class="lline">✓ loading <span class="lg">10+ years</span> · 8 industries · 3 continents</div>
-    <div class="lline">✓ loading <span class="lb">EY LLP</span> · Fidelity · ESG Carbon · ArcelorMittal Belgium · COVID response</div>
-    <div class="lline">✓ loading <span class="lh">DOH Abu Dhabi</span> · Population Health Intelligence · Spike Alert · Claims</div>
-    <div class="lline">✓ loading <span class="lh">Databricks Architect</span> · Agentic AI · LangChain · MLOps · NLP · OCR</div>
-    <div class="lline">✓ loading <span class="lg">CFA Level I</span> · ESG · SASB · Financial Modelling</div>
-    <div class="lline">$ <span class="lh">ready.</span> Welcome.</div>
-  </div>
+
   <div class="lbar"><div class="lfill" id="lf"></div></div>
   <div class="lpct" id="lp">0%</div>
 </div>
