@@ -1240,7 +1240,7 @@ footer{flex-direction:column;gap:.4rem;text-align:center;}
 <section id="contact"><div class="wrap">
   <div class="contact-inner">
     <p class="contact-pre rv">Ready to build something world-class?</p>
-    <h2 class="contact-title rv">Let's<br><span class="g">Connect.</span></h2>
+    <h2 class="contact-title rv">Let's Build<br><span class="g">Something Great.</span></h2>
     <p class="contact-sub rv">Senior architecture, NLP engineering, document intelligence, and Agentic AI roles — especially healthcare AI, ESG, government data platforms, and enterprise AI transformation.</p>
     <div class="contact-acts rv">
       <a href="https://mail.google.com/mail/?view=cm&to=s.aggarwal002%40gmail.com&su=Let%27s%20Connect%20%E2%80%94%20Saw%20Your%20Portfolio&body=Hi%20Shivani%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20was%20impressed.%20I%27d%20love%20to%20connect%20about%20%5Byour%20topic%5D.%0A%0ABest%20regards" target="_blank" class="btn btn-g" style="font-size:.85rem;padding:1rem 2.2rem;">
@@ -1305,18 +1305,22 @@ el.style.opacity=‘1’;el.style.transform=‘none’;el.classList.add(‘on’
 
 // STATS COUNTER
 // Stats — run after loader clears
-setTimeout(()=>{
+// Stats counter — runs on DOMContentLoaded, no observer needed
+function runStats(){
 document.querySelectorAll(’.s-num’).forEach(n=>{
-const t=+n.dataset.v;let c=0;
-const step=Math.max(1,Math.ceil(t/60));
+const t=+n.dataset.v;
+if(!t)return;
+let c=0;const step=Math.max(1,Math.ceil(t/50));
 const si=setInterval(()=>{c=Math.min(c+step,t);n.textContent=c+’+’;if(c>=t)clearInterval(si);},30);
 });
-}, 3200);
+}
+if(document.readyState===‘loading’){document.addEventListener(‘DOMContentLoaded’,()=>setTimeout(runStats,500));}
+else{setTimeout(runStats,500);}
 
 // SKILL BARS
-setTimeout(()=>{
-document.querySelectorAll(’.sb-fill’).forEach(b=>b.style.width=b.dataset.w+’%’);
-}, 3400);
+function runBars(){document.querySelectorAll(’.sb-fill’).forEach(b=>b.style.width=b.dataset.w+’%’);}
+if(document.readyState===‘loading’){document.addEventListener(‘DOMContentLoaded’,()=>setTimeout(runBars,700));}
+else{setTimeout(runBars,700);}
 
 // RADAR CHART
 const rc=document.getElementById(‘rc’);
