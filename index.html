@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -36,57 +35,57 @@ body{background:var(--bg,#060e1a);color:var(--text,#e8f1f8);font-family:var(--bo
 body::before{content:'';position:fixed;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,212,196,0.008) 3px,rgba(0,212,196,0.008) 4px);pointer-events:none;z-index:9998;}
 
 /* ─── CURSOR ──────────────────────────────────────────────── */
-#cd{position:fixed;width:6px;height:6px;background:var(–teal);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);box-shadow:0 0 10px var(–teal);}
+#cd{position:fixed;width:6px;height:6px;background:var(--teal);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);box-shadow:0 0 10px var(--teal);}
 #cr{position:fixed;width:34px;height:34px;border:1px solid rgba(0,212,196,0.4);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .2s,height .2s,background .2s;}
 #cr.h{width:52px;height:52px;background:rgba(0,212,196,0.05);}
-#sp{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(–teal),var(–blue));z-index:1000;width:0;}
+#sp{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--teal),var(--blue));z-index:1000;width:0;}
 
 /* ─── LOADER ─────────────────────────────────────────────── */
-#loader{position:fixed;inset:0;background:var(–bg);z-index:9000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem;}
-.lcode{font-family:var(–mono);font-size:.78rem;color:var(–text-3);width:460px;max-width:90vw;line-height:2.1;}
+#loader{position:fixed;inset:0;background:var(--bg);z-index:9000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem;}
+.lcode{font-family:var(--mono);font-size:.78rem;color:var(--text-3);width:460px;max-width:90vw;line-height:2.1;}
 .lline{opacity:0;transform:translateX(-8px);}
-.lh{color:var(–teal);}.lg{color:var(–gold);}.lb{color:var(–blue);}
+.lh{color:var(--teal);}.lg{color:var(--gold);}.lb{color:var(--blue);}
 .lbar{width:460px;max-width:90vw;height:2px;background:rgba(255,255,255,.05);}
-.lfill{height:100%;background:linear-gradient(90deg,var(–teal),var(–blue));width:0%;}
-.lpct{font-family:var(–mono);font-size:.7rem;color:var(–text-3);}
+.lfill{height:100%;background:linear-gradient(90deg,var(--teal),var(--blue));width:0%;}
+.lpct{font-family:var(--mono);font-size:.7rem;color:var(--text-3);}
 
 /* ─── NAV ─────────────────────────────────────────────────── */
 nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 3.5rem;background:rgba(7,16,30,.88);backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,212,196,.07);}
-.nav-logo{font-family:var(–display);font-weight:700;font-size:.88rem;color:var(–teal);letter-spacing:.1em;text-decoration:none;}
+.nav-logo{font-family:var(--display);font-weight:700;font-size:.88rem;color:var(--teal);letter-spacing:.1em;text-decoration:none;}
 .nav-links{display:flex;gap:2rem;list-style:none;}
-.nav-links a{font-family:var(–mono);font-size:.68rem;color:var(–text-3);text-decoration:none;letter-spacing:.12em;text-transform:uppercase;transition:color .2s;}
-.nav-links a:hover,.nav-links a.on{color:var(–teal);}
-.nav-cta{font-family:var(–mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;padding:.52rem 1.35rem;background:transparent;border:1px solid var(–teal);color:var(–teal);text-decoration:none;transition:all .2s;position:relative;overflow:hidden;}
-.nav-cta::before{content:’’;position:absolute;inset:0;background:var(–teal);transform:translateX(-101%);transition:transform .25s cubic-bezier(.76,0,.24,1);}
-.nav-cta:hover{color:var(–bg);}.nav-cta:hover::before{transform:translateX(0);}
+.nav-links a{font-family:var(--mono);font-size:.68rem;color:var(--text-3);text-decoration:none;letter-spacing:.12em;text-transform:uppercase;transition:color .2s;}
+.nav-links a:hover,.nav-links a.on{color:var(--teal);}
+.nav-cta{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;padding:.52rem 1.35rem;background:transparent;border:1px solid var(--teal);color:var(--teal);text-decoration:none;transition:all .2s;position:relative;overflow:hidden;}
+.nav-cta::before{content:'';position:absolute;inset:0;background:var(--teal);transform:translateX(-101%);transition:transform .25s cubic-bezier(.76,0,.24,1);}
+.nav-cta:hover{color:var(--bg);}.nav-cta:hover::before{transform:translateX(0);}
 .nav-cta span{position:relative;z-index:1;}
 
 /* ─── LAYOUT ─────────────────────────────────────────────── */
 .wrap{max-width:1180px;margin:0 auto;padding:0 3.5rem;}
-.eyebrow{font-family:var(–mono);font-size:.68rem;color:var(–teal);letter-spacing:.2em;text-transform:uppercase;margin-bottom:.85rem;display:flex;align-items:center;gap:.75rem;}
-.eyebrow::before{content:’’;width:28px;height:1px;background:var(–teal);}
-.sec-title{font-family:var(–display);font-weight:700;font-size:clamp(1.8rem,3.5vw,2.8rem);line-height:1.06;letter-spacing:-.02em;margin-bottom:.6rem;}
-.sec-sub{color:var(–text-2);font-size:.92rem;max-width:600px;margin-bottom:2.8rem;line-height:1.75;}
+.eyebrow{font-family:var(--mono);font-size:.68rem;color:var(--teal);letter-spacing:.2em;text-transform:uppercase;margin-bottom:.85rem;display:flex;align-items:center;gap:.75rem;}
+.eyebrow::before{content:'';width:28px;height:1px;background:var(--teal);}
+.sec-title{font-family:var(--display);font-weight:700;font-size:clamp(1.8rem,3.5vw,2.8rem);line-height:1.06;letter-spacing:-.02em;margin-bottom:.6rem;}
+.sec-sub{color:var(--text-2);font-size:.92rem;max-width:600px;margin-bottom:2.8rem;line-height:1.75;}
 
 /* ─── HERO ────────────────────────────────────────────────── */
 #hero{min-height:calc(100vh - 60px);display:flex;align-items:center;padding:4rem 0;margin-top:60px;}
 .hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;max-width:1180px;margin:0 auto;padding:0 3.5rem;width:100%;}
-.hero-eyebrow{font-family:var(–mono);font-size:.68rem;color:var(–teal);letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.4rem;}
-.hero-eyebrow::before{content:’> ’;}
-.hero-name{font-family:var(–display);font-weight:900;font-size:clamp(2.6rem,5vw,4.8rem);line-height:.92;letter-spacing:-.03em;margin-bottom:1.3rem;}
-.hero-name .l1{display:block;color:var(–text);}
-.hero-name .l2{display:block;background:linear-gradient(135deg,var(–teal),#38f0e8 45%,var(–blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hero-eyebrow{font-family:var(--mono);font-size:.68rem;color:var(--teal);letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.4rem;}
+.hero-eyebrow::before{content:'> ';}
+.hero-name{font-family:var(--display);font-weight:900;font-size:clamp(2.6rem,5vw,4.8rem);line-height:.92;letter-spacing:-.03em;margin-bottom:1.3rem;}
+.hero-name .l1{display:block;color:var(--text);}
+.hero-name .l2{display:block;background:linear-gradient(135deg,var(--teal),#38f0e8 45%,var(--blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 /* HERO HEADLINE — key fix: readable body copy */
-.hero-hl{font-size:1rem;color:var(–text-2);line-height:1.85;max-width:520px;margin-bottom:2rem;}
-.hero-hl strong{color:var(–text);font-weight:500;}
+.hero-hl{font-size:1rem;color:var(--text-2);line-height:1.85;max-width:520px;margin-bottom:2rem;}
+.hero-hl strong{color:var(--text);font-weight:500;}
 .hero-badges{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:2.2rem;}
-.badge{font-family:var(–mono);font-size:.62rem;letter-spacing:.07em;padding:.22rem .65rem;border:1px solid rgba(0,212,196,.22);color:rgba(0,212,196,.82);background:rgba(0,212,196,.04);}
+.badge{font-family:var(--mono);font-size:.62rem;letter-spacing:.07em;padding:.22rem .65rem;border:1px solid rgba(0,212,196,.22);color:rgba(0,212,196,.82);background:rgba(0,212,196,.04);}
 .badge.gold{border-color:rgba(240,180,41,.35);color:rgba(240,180,41,.9);background:rgba(240,180,41,.04);}
 .hero-ctas{display:flex;gap:.85rem;flex-wrap:wrap;}
-.btn{font-family:var(–mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;padding:.82rem 1.85rem;text-decoration:none;display:inline-flex;align-items:center;gap:.45rem;transition:all .25s;border:1px solid transparent;}
-.btn-p{background:var(–teal);color:var(–bg);border-color:var(–teal);}.btn-p:hover{background:transparent;color:var(–teal);}
-.btn-g{background:transparent;color:var(–red-soft);border-color:rgba(248,113,113,.35);}.btn-g:hover{background:rgba(248,113,113,.08);border-color:var(–red-soft);}
-.btn-s{background:transparent;color:var(–text-2);border-color:rgba(255,255,255,.14);}.btn-s:hover{border-color:var(–teal);color:var(–teal);}
+.btn{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;padding:.82rem 1.85rem;text-decoration:none;display:inline-flex;align-items:center;gap:.45rem;transition:all .25s;border:1px solid transparent;}
+.btn-p{background:var(--teal);color:var(--bg);border-color:var(--teal);}.btn-p:hover{background:transparent;color:var(--teal);}
+.btn-g{background:transparent;color:var(--red-soft);border-color:rgba(248,113,113,.35);}.btn-g:hover{background:rgba(248,113,113,.08);border-color:var(--red-soft);}
+.btn-s{background:transparent;color:var(--text-2);border-color:rgba(255,255,255,.14);}.btn-s:hover{border-color:var(--teal);color:var(--teal);}
 /* Photo */
 .hero-right{display:flex;align-items:center;justify-content:center;position:relative;}
 .photo-wrap{position:relative;width:350px;}
@@ -94,34 +93,34 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
 .photo-frame video{width:100%;height:100%;object-fit:cover;display:block;}
 .photo-frame-back{position:absolute;top:16px;right:-16px;width:100%;height:100%;border:1px solid rgba(0,212,196,.1);z-index:-1;}
 .photo-overlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(7,16,30,.97) 0%,transparent 100%);padding:1.4rem 1.2rem .9rem;}
-.photo-name{font-family:var(–display);font-weight:700;font-size:.82rem;color:var(–text);}
-.photo-role{font-family:var(–mono);font-size:.6rem;color:var(–teal);letter-spacing:.08em;margin-top:.2rem;}
-.photo-loc{font-family:var(–mono);font-size:.6rem;color:var(–text-3);margin-top:.12rem;}
-.orbit-badge{position:absolute;font-family:var(–mono);font-size:.6rem;color:var(–teal);border:1px solid rgba(0,212,196,.25);padding:.35rem .75rem;background:rgba(7,16,30,.94);white-space:nowrap;}
+.photo-name{font-family:var(--display);font-weight:700;font-size:.82rem;color:var(--text);}
+.photo-role{font-family:var(--mono);font-size:.6rem;color:var(--teal);letter-spacing:.08em;margin-top:.2rem;}
+.photo-loc{font-family:var(--mono);font-size:.6rem;color:var(--text-3);margin-top:.12rem;}
+.orbit-badge{position:absolute;font-family:var(--mono);font-size:.6rem;color:var(--teal);border:1px solid rgba(0,212,196,.25);padding:.35rem .75rem;background:rgba(7,16,30,.94);white-space:nowrap;}
 .ob1{top:8%;right:-60px;animation:float 3s ease-in-out infinite;}
 .ob2{bottom:20%;left:-70px;animation:float 3.5s ease-in-out 1.5s infinite;}
 @keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
 @keyframes blink{0%,100%{opacity:1;}50%{opacity:.25;}}
 
 /* ─── MARQUEE ────────────────────────────────────────────── */
-.marquee-wrap{border-top:1px solid var(–border);border-bottom:1px solid var(–border);background:rgba(0,212,196,.015);overflow:hidden;padding:.85rem 0;}
+.marquee-wrap{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:rgba(0,212,196,.015);overflow:hidden;padding:.85rem 0;}
 .marquee-track{display:flex;width:max-content;animation:marquee 32s linear infinite;}
 .marquee-track:hover{animation-play-state:paused;}
 @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
-.m-item{font-family:var(–mono);font-size:.68rem;letter-spacing:.15em;color:var(–text-3);padding:0 2rem;text-transform:uppercase;white-space:nowrap;}
-.m-item span{color:var(–teal);margin-right:.4rem;}
+.m-item{font-family:var(--mono);font-size:.68rem;letter-spacing:.15em;color:var(--text-3);padding:0 2rem;text-transform:uppercase;white-space:nowrap;}
+.m-item span{color:var(--teal);margin-right:.4rem;}
 
 /* ─── STATS ──────────────────────────────────────────────── */
 #stats{padding:4.5rem 0;}
-.stats-grid{display:grid;grid-template-columns:repeat(6,1fr);border:1px solid var(–border);}
-.s-cell{padding:2.2rem 1.2rem;text-align:center;border-right:1px solid var(–border);transition:background .3s;position:relative;overflow:hidden;}
+.stats-grid{display:grid;grid-template-columns:repeat(6,1fr);border:1px solid var(--border);}
+.s-cell{padding:2.2rem 1.2rem;text-align:center;border-right:1px solid var(--border);transition:background .3s;position:relative;overflow:hidden;}
 .s-cell:last-child{border-right:none;}
 .s-cell:hover{background:rgba(0,212,196,.04);}
-.s-cell::after{content:’’;position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(–teal),transparent);transform:scaleX(0);transition:transform .4s;}
+.s-cell::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--teal),transparent);transform:scaleX(0);transition:transform .4s;}
 .s-cell:hover::after{transform:scaleX(1);}
-.s-num{font-family:var(–display);font-weight:900;font-size:2.6rem;background:linear-gradient(135deg,var(–teal),var(–blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;line-height:1;}
+.s-num{font-family:var(--display);font-weight:900;font-size:2.6rem;background:linear-gradient(135deg,var(--teal),var(--blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;line-height:1;}
 /* STATS LABELS — brighter than before */
-.s-label{font-family:var(–mono);font-size:.62rem;color:var(–text-3);letter-spacing:.1em;text-transform:uppercase;margin-top:.35rem;display:block;}
+.s-label{font-family:var(--mono);font-size:.62rem;color:var(--text-3);letter-spacing:.1em;text-transform:uppercase;margin-top:.35rem;display:block;}
 
 /* ─── ABOUT ──────────────────────────────────────────────── */
 #about{padding:6rem 0;}
@@ -129,32 +128,32 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
 .about-video-frame{width:100%;aspect-ratio:2/3;overflow:hidden;border:1px solid rgba(0,212,196,.2);position:relative;}
 .about-video-frame video{width:100%;height:100%;object-fit:cover;}
 .about-frame-deco{position:absolute;top:14px;right:-14px;width:100%;height:100%;border:1px solid rgba(0,212,196,.1);z-index:-1;pointer-events:none;}
-.about-cap{font-family:var(–mono);font-size:.6rem;color:var(–text-3);letter-spacing:.1em;text-align:center;margin-top:.9rem;text-transform:uppercase;}
+.about-cap{font-family:var(--mono);font-size:.6rem;color:var(--text-3);letter-spacing:.1em;text-align:center;margin-top:.9rem;text-transform:uppercase;}
 /* ABOUT BODY TEXT — warmer, more readable */
-.about-text{color:var(–text-2);line-height:1.85;font-size:.93rem;margin-bottom:1.2rem;}
-.about-text strong{color:var(–text);font-weight:500;}
+.about-text{color:var(--text-2);line-height:1.85;font-size:.93rem;margin-bottom:1.2rem;}
+.about-text strong{color:var(--text);font-weight:500;}
 .worthy{border:1px solid rgba(240,180,41,.22);padding:1.5rem;background:rgba(240,180,41,.03);margin-top:1.5rem;}
-.worthy-title{font-family:var(–mono);font-size:.65rem;color:var(–gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:.85rem;}
-.w-item{font-size:.85rem;color:var(–text-2);padding:.28rem 0;display:flex;gap:.75rem;align-items:flex-start;line-height:1.55;}
-.w-item::before{content:‘✦’;color:var(–gold);font-size:.65rem;margin-top:.22rem;flex-shrink:0;}
+.worthy-title{font-family:var(--mono);font-size:.65rem;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:.85rem;}
+.w-item{font-size:.85rem;color:var(--text-2);padding:.28rem 0;display:flex;gap:.75rem;align-items:flex-start;line-height:1.55;}
+.w-item::before{content:'✦';color:var(--gold);font-size:.65rem;margin-top:.22rem;flex-shrink:0;}
 
 /* ─── PIPELINE ───────────────────────────────────────────── */
-#pipeline{padding:5.5rem 0;background:var(–bg2);border-top:1px solid var(–border);border-bottom:1px solid var(–border);}
+#pipeline{padding:5.5rem 0;background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
 .pipeline-row{display:flex;align-items:center;justify-content:center;}
 .p-node{flex:0 0 auto;text-align:center;width:110px;}
-.p-circle{width:62px;height:62px;border-radius:50%;margin:0 auto .7rem;display:flex;align-items:center;justify-content:center;font-size:1.3rem;border:1.5px solid var(–border);background:var(–surface);transition:all .3s;}
-.p-node:hover .p-circle{border-color:var(–teal);box-shadow:0 0 25px rgba(0,212,196,.22);background:rgba(0,212,196,.06);}
-.p-label{font-family:var(–display);font-size:.58rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(–text-2);}
-.p-sub{font-family:var(–mono);font-size:.56rem;color:var(–text-3);margin-top:.15rem;}
-.p-conn{flex:1;max-width:60px;height:1px;background:var(–border);position:relative;}
-.p-conn::after{content:’’;position:absolute;top:50%;width:7px;height:7px;border-radius:50%;background:var(–teal);box-shadow:0 0 8px var(–teal);transform:translateY(-50%);animation:flow 2s linear infinite;}
+.p-circle{width:62px;height:62px;border-radius:50%;margin:0 auto .7rem;display:flex;align-items:center;justify-content:center;font-size:1.3rem;border:1.5px solid var(--border);background:var(--surface);transition:all .3s;}
+.p-node:hover .p-circle{border-color:var(--teal);box-shadow:0 0 25px rgba(0,212,196,.22);background:rgba(0,212,196,.06);}
+.p-label{font-family:var(--display);font-size:.58rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--text-2);}
+.p-sub{font-family:var(--mono);font-size:.56rem;color:var(--text-3);margin-top:.15rem;}
+.p-conn{flex:1;max-width:60px;height:1px;background:var(--border);position:relative;}
+.p-conn::after{content:'';position:absolute;top:50%;width:7px;height:7px;border-radius:50%;background:var(--teal);box-shadow:0 0 8px var(--teal);transform:translateY(-50%);animation:flow 2s linear infinite;}
 .p-conn:nth-of-type(2)::after{animation-delay:.4s;}
 .p-conn:nth-of-type(4)::after{animation-delay:.8s;}
 .p-conn:nth-of-type(6)::after{animation-delay:1.2s;}
 .p-conn:nth-of-type(8)::after{animation-delay:1.6s;}
 @keyframes flow{0%{left:-4px;opacity:0;}15%{opacity:1;}85%{opacity:1;}100%{left:calc(100% + 4px);opacity:0;}}
 .p-layers{display:flex;justify-content:center;gap:.8rem;margin-top:2.5rem;flex-wrap:wrap;}
-.p-layer{font-family:var(–mono);font-size:.64rem;letter-spacing:.1em;padding:.35rem .85rem;border:1px solid var(–border);color:var(–text-3);text-transform:uppercase;}
+.p-layer{font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;padding:.35rem .85rem;border:1px solid var(--border);color:var(--text-3);text-transform:uppercase;}
 
 /* ─── PROJECTS ───────────────────────────────────────────── */
 #projects{padding:6rem 0;}
@@ -162,16 +161,16 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
 /* Section divider used inside projects */
 .proj-era{max-width:1180px;margin:0 auto;padding:0 3.5rem;}
 .era-header{display:flex;align-items:center;gap:1.2rem;margin-bottom:1.8rem;margin-top:1.5rem;}
-.era-line{flex:1;height:1px;background:var(–border);}
-.era-label{font-family:var(–mono);font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;white-space:nowrap;padding:.3rem .9rem;border:1px solid var(–border);color:var(–text-3);}
-.era-label.ey{border-color:rgba(240,180,41,.3);color:var(–gold);background:rgba(240,180,41,.04);}
-.era-label.fractal{border-color:rgba(0,212,196,.25);color:var(–teal);background:rgba(0,212,196,.04);}
+.era-line{flex:1;height:1px;background:var(--border);}
+.era-label{font-family:var(--mono);font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;white-space:nowrap;padding:.3rem .9rem;border:1px solid var(--border);color:var(--text-3);}
+.era-label.ey{border-color:rgba(240,180,41,.3);color:var(--gold);background:rgba(240,180,41,.04);}
+.era-label.fractal{border-color:rgba(0,212,196,.25);color:var(--teal);background:rgba(0,212,196,.04);}
 
 .proj-scroll{overflow-x:auto;padding:0 3.5rem 1.5rem;cursor:grab;user-select:none;scrollbar-width:thin;scrollbar-color:rgba(0,212,196,.2) transparent;}
 .proj-scroll:active{cursor:grabbing;}
 .proj-track{display:flex;gap:1.4rem;width:max-content;padding-bottom:.5rem;}
-.pc{flex:0 0 360px;background:var(–surface);border:1px solid var(–border);padding:2.2rem;transition:border-color .3s,box-shadow .3s;position:relative;overflow:hidden;}
-.pc::after{content:’’;position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,212,196,.04),transparent);opacity:0;transition:opacity .3s;pointer-events:none;}
+.pc{flex:0 0 360px;background:var(--surface);border:1px solid var(--border);padding:2.2rem;transition:border-color .3s,box-shadow .3s;position:relative;overflow:hidden;}
+.pc::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,212,196,.04),transparent);opacity:0;transition:opacity .3s;pointer-events:none;}
 .pc:hover::after{opacity:1;}
 .pc:hover{border-color:rgba(0,212,196,.3);box-shadow:0 8px 32px rgba(0,0,0,.3);}
 
@@ -188,141 +187,141 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
 .pc.ey:hover{border-color:rgba(167,139,250,.4);}
 
 /* Card label pill */
-.pc-era{display:inline-flex;align-items:center;gap:.4rem;font-family:var(–mono);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;padding:.18rem .6rem;margin-bottom:.85rem;border:1px solid;width:fit-content;}
-.pc-era.doh-l{border-color:rgba(0,212,196,.35);color:var(–teal);background:rgba(0,212,196,.06);}
-.pc-era.ey-l{border-color:rgba(240,180,41,.35);color:var(–gold);background:rgba(240,180,41,.06);}
+.pc-era{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--mono);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;padding:.18rem .6rem;margin-bottom:.85rem;border:1px solid;width:fit-content;}
+.pc-era.doh-l{border-color:rgba(0,212,196,.35);color:var(--teal);background:rgba(0,212,196,.06);}
+.pc-era.ey-l{border-color:rgba(240,180,41,.35);color:var(--gold);background:rgba(240,180,41,.06);}
 .pc-era.fractal-l{border-color:rgba(59,130,246,.3);color:rgba(147,197,253,.85);background:rgba(59,130,246,.05);}
 .pc-era.ey-p{border-color:rgba(167,139,250,.3);color:rgba(196,167,255,.85);background:rgba(167,139,250,.05);}
 
-.pc-sector{font-family:var(–mono);font-size:.6rem;color:var(–text-3);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.75rem;}
+.pc-sector{font-family:var(--mono);font-size:.6rem;color:var(--text-3);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.75rem;}
 .pc-icon{font-size:1.9rem;display:block;margin-bottom:.8rem;}
-.pc-title{font-family:var(–display);font-weight:700;font-size:.98rem;line-height:1.3;margin-bottom:.65rem;color:var(–text);}
+.pc-title{font-family:var(--display);font-weight:700;font-size:.98rem;line-height:1.3;margin-bottom:.65rem;color:var(--text);}
 /* CARD DESC — brightest body text fix */
-.pc-desc{font-size:.84rem;color:var(–text-2);line-height:1.68;margin-bottom:1rem;}
-.pc-desc strong{color:var(–text);font-weight:500;}
+.pc-desc{font-size:.84rem;color:var(--text-2);line-height:1.68;margin-bottom:1rem;}
+.pc-desc strong{color:var(--text);font-weight:500;}
 .pc-tags{display:flex;flex-wrap:wrap;gap:.28rem;margin-bottom:1rem;}
-.tag{font-family:var(–mono);font-size:.58rem;padding:.14rem .48rem;border:1px solid rgba(0,212,196,.15);color:rgba(0,212,196,.6);}
+.tag{font-family:var(--mono);font-size:.58rem;padding:.14rem .48rem;border:1px solid rgba(0,212,196,.15);color:rgba(0,212,196,.6);}
 .tag.ey-tag{border-color:rgba(240,180,41,.2);color:rgba(240,180,41,.65);}
 .tag.ey-p-tag{border-color:rgba(167,139,250,.2);color:rgba(196,167,255,.65);}
-.pc-impact{font-family:var(–mono);font-size:.71rem;color:var(–gold);padding-top:.9rem;border-top:1px solid var(–border);line-height:1.55;}
-.pc-impact.teal{color:var(–teal);}
-.pc-impact.green{color:var(–green);}
-.pc-hint{text-align:center;font-family:var(–mono);font-size:.66rem;color:var(–text-3);letter-spacing:.1em;margin-bottom:1.2rem;}
+.pc-impact{font-family:var(--mono);font-size:.71rem;color:var(--gold);padding-top:.9rem;border-top:1px solid var(--border);line-height:1.55;}
+.pc-impact.teal{color:var(--teal);}
+.pc-impact.green{color:var(--green);}
+.pc-hint{text-align:center;font-family:var(--mono);font-size:.66rem;color:var(--text-3);letter-spacing:.1em;margin-bottom:1.2rem;}
 
 /* Legend */
 .proj-legend{display:flex;gap:1.8rem;flex-wrap:wrap;align-items:center;margin-top:1.4rem;padding:0 3.5rem;}
-.pl-item{display:flex;align-items:center;gap:.45rem;font-family:var(–mono);font-size:.64rem;color:var(–text-3);letter-spacing:.06em;}
+.pl-item{display:flex;align-items:center;gap:.45rem;font-family:var(--mono);font-size:.64rem;color:var(--text-3);letter-spacing:.06em;}
 .pl-dot{width:8px;height:8px;border-radius:2px;flex-shrink:0;}
 
 /* ─── WORLD MAP ──────────────────────────────────────────── */
-#world{padding:6rem 0;background:var(–bg2);border-top:1px solid var(–border);}
+#world{padding:6rem 0;background:var(--bg2);border-top:1px solid var(--border);}
 .world-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;}
 .world-svg{width:100%;filter:drop-shadow(0 0 12px rgba(0,212,196,.07));}
-.d-item{display:flex;gap:.95rem;align-items:flex-start;padding:1rem 0;border-bottom:1px solid var(–border);}
+.d-item{display:flex;gap:.95rem;align-items:flex-start;padding:1rem 0;border-bottom:1px solid var(--border);}
 .d-item:last-child{border-bottom:none;}
 .d-flag{font-size:1.35rem;flex-shrink:0;margin-top:.1rem;}
-.d-country{font-family:var(–display);font-size:.8rem;font-weight:700;margin-bottom:.2rem;color:var(–text);}
-.d-desc{font-family:var(–mono);font-size:.63rem;color:var(–text-3);line-height:1.55;}
+.d-country{font-family:var(--display);font-size:.8rem;font-weight:700;margin-bottom:.2rem;color:var(--text);}
+.d-desc{font-family:var(--mono);font-size:.63rem;color:var(--text-3);line-height:1.55;}
 
 /* ─── SKILLS ─────────────────────────────────────────────── */
 #skills{padding:6rem 0;}
 .skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
-.sg-title{font-family:var(–mono);font-size:.66rem;color:var(–teal);letter-spacing:.15em;text-transform:uppercase;margin-bottom:.9rem;margin-top:1.8rem;padding-bottom:.38rem;border-bottom:1px solid var(–border);}
+.sg-title{font-family:var(--mono);font-size:.66rem;color:var(--teal);letter-spacing:.15em;text-transform:uppercase;margin-bottom:.9rem;margin-top:1.8rem;padding-bottom:.38rem;border-bottom:1px solid var(--border);}
 .sg-title:first-child{margin-top:0;}
-.sg-title.gold-t{color:var(–gold);border-color:rgba(240,180,41,.2);}
+.sg-title.gold-t{color:var(--gold);border-color:rgba(240,180,41,.2);}
 .sb{margin-bottom:.78rem;}
 .sb-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:.25rem;}
-.sb-name{font-size:.8rem;color:var(–text-2);}
-.sb-pct{font-family:var(–mono);font-size:.66rem;color:var(–text-3);}
+.sb-name{font-size:.8rem;color:var(--text-2);}
+.sb-pct{font-family:var(--mono);font-size:.66rem;color:var(--text-3);}
 .sb-track{height:3px;background:rgba(255,255,255,.05);overflow:hidden;}
-.sb-fill{height:100%;width:0;background:linear-gradient(90deg,var(–teal),var(–blue));transition:width 1.4s cubic-bezier(.4,0,.2,1);}
-.sb-fill.gf{background:linear-gradient(90deg,var(–gold),#e09000);}
+.sb-fill{height:100%;width:0;background:linear-gradient(90deg,var(--teal),var(--blue));transition:width 1.4s cubic-bezier(.4,0,.2,1);}
+.sb-fill.gf{background:linear-gradient(90deg,var(--gold),#e09000);}
 
 /* ─── GOVERNANCE ─────────────────────────────────────────── */
-#governance{padding:5.5rem 0;border-top:1px solid var(–border);}
+#governance{padding:5.5rem 0;border-top:1px solid var(--border);}
 .gov-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.8rem;}
-.gov-card{background:var(–surface);border:1px solid var(–border);padding:1.7rem;transition:border-color .3s;}
+.gov-card{background:var(--surface);border:1px solid var(--border);padding:1.7rem;transition:border-color .3s;}
 .gov-card:hover{border-color:rgba(0,212,196,.28);}
 .gov-icon{font-size:1.6rem;margin-bottom:.6rem;}
-.gov-title{font-family:var(–display);font-weight:700;font-size:.85rem;margin-bottom:.42rem;color:var(–text);}
-.gov-desc{font-size:.8rem;color:var(–text-3);line-height:1.62;}
+.gov-title{font-family:var(--display);font-weight:700;font-size:.85rem;margin-bottom:.42rem;color:var(--text);}
+.gov-desc{font-size:.8rem;color:var(--text-3);line-height:1.62;}
 
 /* ─── SECTORS ─────────────────────────────────────────────── */
-#sectors{padding:5.5rem 0;background:var(–bg2);border-top:1px solid var(–border);}
-.sectors-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(–border);margin-top:2.8rem;}
-.sec-cell{background:var(–bg2);padding:2rem 1.4rem;transition:background .3s;position:relative;overflow:hidden;}
-.sec-cell::after{content:’’;position:absolute;top:0;left:0;right:0;height:2px;background:var(–teal);transform:scaleX(0);transition:transform .3s;transform-origin:left;}
+#sectors{padding:5.5rem 0;background:var(--bg2);border-top:1px solid var(--border);}
+.sectors-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);margin-top:2.8rem;}
+.sec-cell{background:var(--bg2);padding:2rem 1.4rem;transition:background .3s;position:relative;overflow:hidden;}
+.sec-cell::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--teal);transform:scaleX(0);transition:transform .3s;transform-origin:left;}
 .sec-cell:hover{background:rgba(0,212,196,.03);}
 .sec-cell:hover::after{transform:scaleX(1);}
 .sec-icon{font-size:1.85rem;margin-bottom:.85rem;display:block;}
-.sec-name{font-family:var(–display);font-weight:700;font-size:.86rem;margin-bottom:.6rem;color:var(–text);}
-.sec-desc{font-size:.79rem;color:var(–text-3);line-height:1.58;}
-.sec-tag{display:inline-block;font-family:var(–mono);font-size:.57rem;padding:.12rem .46rem;border:1px solid rgba(0,212,196,.15);color:rgba(0,212,196,.55);margin-top:.6rem;}
+.sec-name{font-family:var(--display);font-weight:700;font-size:.86rem;margin-bottom:.6rem;color:var(--text);}
+.sec-desc{font-size:.79rem;color:var(--text-3);line-height:1.58;}
+.sec-tag{display:inline-block;font-family:var(--mono);font-size:.57rem;padding:.12rem .46rem;border:1px solid rgba(0,212,196,.15);color:rgba(0,212,196,.55);margin-top:.6rem;}
 
 /* ─── TESTIMONIALS ──────────────────────────────────────── */
-#testimonials{padding:6rem 0;border-top:1px solid var(–border);}
+#testimonials{padding:6rem 0;border-top:1px solid var(--border);}
 .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem;margin-top:2.8rem;}
-.tcard{background:var(–surface);border:1px solid var(–border);padding:1.9rem;transition:border-color .3s;position:relative;}
+.tcard{background:var(--surface);border:1px solid var(--border);padding:1.9rem;transition:border-color .3s;position:relative;}
 .tcard:hover{border-color:rgba(0,212,196,.22);}
-.tcard::before{content:’”’;position:absolute;top:-.3rem;left:1.1rem;font-size:5rem;color:rgba(0,212,196,.05);font-family:Georgia,serif;line-height:1;pointer-events:none;}
-.tcard-quote{font-size:.87rem;color:var(–text-2);line-height:1.78;margin-bottom:1.2rem;font-style:italic;position:relative;z-index:1;}
-.tcard-quote em{color:var(–teal);font-style:normal;font-weight:500;}
+.tcard::before{content:'"';position:absolute;top:-.3rem;left:1.1rem;font-size:5rem;color:rgba(0,212,196,.05);font-family:Georgia,serif;line-height:1;pointer-events:none;}
+.tcard-quote{font-size:.87rem;color:var(--text-2);line-height:1.78;margin-bottom:1.2rem;font-style:italic;position:relative;z-index:1;}
+.tcard-quote em{color:var(--teal);font-style:normal;font-weight:500;}
 .tcard-author{display:flex;gap:.8rem;align-items:center;}
-.tcard-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(–teal),var(–blue));display:flex;align-items:center;justify-content:center;font-family:var(–display);font-weight:700;font-size:.73rem;color:var(–bg);flex-shrink:0;}
-.tcard-name{font-family:var(–display);font-weight:700;font-size:.76rem;color:var(–text);}
-.tcard-role{font-family:var(–mono);font-size:.6rem;color:var(–text-3);margin-top:.12rem;line-height:1.3;}
-.tcard-rel{font-family:var(–mono);font-size:.58rem;color:var(–teal);margin-top:.45rem;}
+.tcard-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--blue));display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:700;font-size:.73rem;color:var(--bg);flex-shrink:0;}
+.tcard-name{font-family:var(--display);font-weight:700;font-size:.76rem;color:var(--text);}
+.tcard-role{font-family:var(--mono);font-size:.6rem;color:var(--text-3);margin-top:.12rem;line-height:1.3;}
+.tcard-rel{font-family:var(--mono);font-size:.58rem;color:var(--teal);margin-top:.45rem;}
 
 /* ─── EXPERIENCE ─────────────────────────────────────────── */
-#experience{padding:6rem 0;background:var(–bg2);border-top:1px solid var(–border);}
+#experience{padding:6rem 0;background:var(--bg2);border-top:1px solid var(--border);}
 .timeline{position:relative;padding-left:1.5rem;}
-.timeline::before{content:’’;position:absolute;left:0;top:8px;bottom:0;width:1px;background:linear-gradient(to bottom,var(–teal),rgba(0,212,196,.04));}
+.timeline::before{content:'';position:absolute;left:0;top:8px;bottom:0;width:1px;background:linear-gradient(to bottom,var(--teal),rgba(0,212,196,.04));}
 .ti{position:relative;margin-bottom:2.6rem;padding-left:2rem;}
-.ti-dot{position:absolute;left:-2.05rem;top:8px;width:10px;height:10px;border-radius:50%;background:var(–teal);box-shadow:0 0 12px var(–teal);}
-.ti-dot.off{background:var(–muted);box-shadow:none;}
-.ti-period{font-family:var(–mono);font-size:.64rem;color:var(–teal);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.22rem;}
-.ti-role{font-family:var(–display);font-weight:700;font-size:1rem;margin-bottom:.1rem;color:var(–text);}
-.ti-co{font-size:.82rem;color:var(–text-3);margin-bottom:.6rem;}
-.ti-desc{font-size:.84rem;color:var(–text-2);line-height:1.72;max-width:620px;}
+.ti-dot{position:absolute;left:-2.05rem;top:8px;width:10px;height:10px;border-radius:50%;background:var(--teal);box-shadow:0 0 12px var(--teal);}
+.ti-dot.off{background:var(--muted);box-shadow:none;}
+.ti-period{font-family:var(--mono);font-size:.64rem;color:var(--teal);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.22rem;}
+.ti-role{font-family:var(--display);font-weight:700;font-size:1rem;margin-bottom:.1rem;color:var(--text);}
+.ti-co{font-size:.82rem;color:var(--text-3);margin-bottom:.6rem;}
+.ti-desc{font-size:.84rem;color:var(--text-2);line-height:1.72;max-width:620px;}
 .ti-highlights{margin-top:.75rem;}
-.ti-hitem{font-size:.82rem;color:var(–text-2);padding:.2rem 0;display:flex;gap:.6rem;line-height:1.55;}
-.ti-hitem::before{content:‘↳’;color:var(–teal);flex-shrink:0;font-size:.78rem;}
-.ti-hitem strong{color:var(–text);font-weight:500;}
+.ti-hitem{font-size:.82rem;color:var(--text-2);padding:.2rem 0;display:flex;gap:.6rem;line-height:1.55;}
+.ti-hitem::before{content:'↳';color:var(--teal);flex-shrink:0;font-size:.78rem;}
+.ti-hitem strong{color:var(--text);font-weight:500;}
 .ti-tags{display:flex;flex-wrap:wrap;gap:.28rem;margin-top:.65rem;}
 
 /* ─── CERTS ──────────────────────────────────────────────── */
 #certs{padding:6rem 0;}
 .certs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:.9rem;}
-.cert-card{display:flex;gap:1rem;align-items:center;background:var(–surface);border:1px solid var(–border);padding:1rem;transition:border-color .3s,transform .2s;}
+.cert-card{display:flex;gap:1rem;align-items:center;background:var(--surface);border:1px solid var(--border);padding:1rem;transition:border-color .3s,transform .2s;}
 .cert-card:hover{border-color:rgba(0,212,196,.28);transform:translateY(-2px);}
 .cert-icon{font-size:1.45rem;flex-shrink:0;}
-.cert-name{font-family:var(–mono);font-size:.7rem;color:var(–text);line-height:1.35;}
-.cert-org{font-size:.65rem;color:var(–text-3);margin-top:.1rem;}
+.cert-name{font-family:var(--mono);font-size:.7rem;color:var(--text);line-height:1.35;}
+.cert-org{font-size:.65rem;color:var(--text-3);margin-top:.1rem;}
 
 /* ─── CONTACT ────────────────────────────────────────────── */
 #contact{padding:7rem 0;position:relative;overflow:hidden;}
-#contact::before{content:’’;position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(0,212,196,.06),transparent 58%);pointer-events:none;}
+#contact::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(0,212,196,.06),transparent 58%);pointer-events:none;}
 .contact-inner{text-align:center;position:relative;z-index:1;}
-.contact-pre{font-family:var(–mono);font-size:.72rem;color:var(–teal);letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.2rem;}
-.contact-title{font-family:var(–display);font-weight:900;font-size:clamp(2.2rem,5.5vw,4.8rem);line-height:.93;letter-spacing:-.04em;margin-bottom:1.2rem;}
-.contact-title .g{background:linear-gradient(135deg,var(–teal),var(–blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-.contact-sub{color:var(–text-2);font-size:.92rem;max-width:500px;margin:0 auto 2.6rem;line-height:1.78;}
+.contact-pre{font-family:var(--mono);font-size:.72rem;color:var(--teal);letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.2rem;}
+.contact-title{font-family:var(--display);font-weight:900;font-size:clamp(2.2rem,5.5vw,4.8rem);line-height:.93;letter-spacing:-.04em;margin-bottom:1.2rem;}
+.contact-title .g{background:linear-gradient(135deg,var(--teal),var(--blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.contact-sub{color:var(--text-2);font-size:.92rem;max-width:500px;margin:0 auto 2.6rem;line-height:1.78;}
 .contact-acts{display:flex;gap:.85rem;justify-content:center;flex-wrap:wrap;margin-bottom:3.2rem;}
-.cinfo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(–border);max-width:820px;margin:0 auto 2.4rem;}
-.cinfo{background:var(–bg);padding:1.7rem;text-align:center;}
+.cinfo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);max-width:820px;margin:0 auto 2.4rem;}
+.cinfo{background:var(--bg);padding:1.7rem;text-align:center;}
 .cinfo-icon{font-size:1.3rem;margin-bottom:.55rem;}
-.cinfo-label{font-family:var(–mono);font-size:.6rem;color:var(–text-3);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.32rem;}
-.cinfo-val{font-family:var(–mono);font-size:.78rem;color:var(–text);}
-.cinfo-val a{color:var(–teal);text-decoration:none;}
-.open-to{border:1px solid var(–border);padding:1.7rem 2.4rem;display:inline-block;max-width:820px;text-align:left;width:100%;}
-.ot-title{font-family:var(–mono);font-size:.63rem;color:var(–teal);letter-spacing:.15em;text-transform:uppercase;margin-bottom:.85rem;}
+.cinfo-label{font-family:var(--mono);font-size:.6rem;color:var(--text-3);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.32rem;}
+.cinfo-val{font-family:var(--mono);font-size:.78rem;color:var(--text);}
+.cinfo-val a{color:var(--teal);text-decoration:none;}
+.open-to{border:1px solid var(--border);padding:1.7rem 2.4rem;display:inline-block;max-width:820px;text-align:left;width:100%;}
+.ot-title{font-family:var(--mono);font-size:.63rem;color:var(--teal);letter-spacing:.15em;text-transform:uppercase;margin-bottom:.85rem;}
 .ot-items{display:flex;flex-wrap:wrap;gap:.42rem;}
-.ot-item{font-family:var(–mono);font-size:.68rem;padding:.26rem .75rem;border:1px solid rgba(0,212,196,.2);color:rgba(0,212,196,.78);display:flex;align-items:center;gap:.35rem;}
-.ot-item::before{content:’’;width:5px;height:5px;border-radius:50%;background:var(–teal);box-shadow:0 0 5px var(–teal);flex-shrink:0;animation:blink 2.2s infinite;}
+.ot-item{font-family:var(--mono);font-size:.68rem;padding:.26rem .75rem;border:1px solid rgba(0,212,196,.2);color:rgba(0,212,196,.78);display:flex;align-items:center;gap:.35rem;}
+.ot-item::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--teal);box-shadow:0 0 5px var(--teal);flex-shrink:0;animation:blink 2.2s infinite;}
 
-footer{border-top:1px solid var(–border);padding:1.7rem 3.5rem;display:flex;justify-content:space-between;align-items:center;}
-footer p{font-family:var(–mono);font-size:.66rem;color:var(–text-3);}
-footer a{color:var(–teal);text-decoration:none;}
+footer{border-top:1px solid var(--border);padding:1.7rem 3.5rem;display:flex;justify-content:space-between;align-items:center;}
+footer p{font-family:var(--mono);font-size:.66rem;color:var(--text-3);}
+footer a{color:var(--teal);text-decoration:none;}
 
 /* ─── REVEAL ─────────────────────────────────────────────── */
 .rv{opacity:1!important;transform:none!important;}
@@ -332,105 +331,105 @@ footer a{color:var(–teal);text-decoration:none;}
 
 /* ─── RESPONSIVE ─────────────────────────────────────────── */
 @media(max-width:920px){
-nav{padding:1rem 1.5rem;}.nav-links{display:none;}
-.wrap,.hero-inner,.proj-scroll,.proj-legend,.proj-era{padding-left:1.5rem;padding-right:1.5rem;}
-.hero-inner,.about-grid,.skills-grid,.world-grid{grid-template-columns:1fr;gap:2.5rem;}
-.hero-right{display:none;}
-.stats-grid{grid-template-columns:repeat(3,1fr);}
-.s-cell{border-bottom:1px solid var(–border);}
-.sectors-grid,.gov-grid,.testi-grid{grid-template-columns:1fr 1fr;}
-.cinfo-grid{grid-template-columns:1fr;}
-footer{flex-direction:column;gap:.4rem;text-align:center;}
+  nav{padding:1rem 1.5rem;}.nav-links{display:none;}
+  .wrap,.hero-inner,.proj-scroll,.proj-legend,.proj-era{padding-left:1.5rem;padding-right:1.5rem;}
+  .hero-inner,.about-grid,.skills-grid,.world-grid{grid-template-columns:1fr;gap:2.5rem;}
+  .hero-right{display:none;}
+  .stats-grid{grid-template-columns:repeat(3,1fr);}
+  .s-cell{border-bottom:1px solid var(--border);}
+  .sectors-grid,.gov-grid,.testi-grid{grid-template-columns:1fr 1fr;}
+  .cinfo-grid{grid-template-columns:1fr;}
+  footer{flex-direction:column;gap:.4rem;text-align:center;}
 }
 
 /* ─── AGENTIC AI ─────────────────────────────────────────── */
-#agentic{padding:6rem 0;border-top:1px solid var(–border);}
+#agentic{padding:6rem 0;border-top:1px solid var(--border);}
 
-.agent-arch{background:var(–surface);border:1px solid var(–border);padding:2rem;overflow-x:auto;}
-.arch-label{font-family:var(–mono);font-size:.63rem;color:var(–text-3);letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.4rem;}
+.agent-arch{background:var(--surface);border:1px solid var(--border);padding:2rem;overflow-x:auto;}
+.arch-label{font-family:var(--mono);font-size:.63rem;color:var(--text-3);letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.4rem;}
 .arch-flow{display:flex;align-items:center;gap:.6rem;min-width:600px;}
-.arch-node{flex:1;text-align:center;padding:1rem .6rem;border:1px solid var(–border);background:var(–bg);}
+.arch-node{flex:1;text-align:center;padding:1rem .6rem;border:1px solid var(--border);background:var(--bg);}
 .arch-node-highlight{border-color:rgba(0,212,196,.4);background:rgba(0,212,196,.05);}
 .arch-icon{font-size:1.5rem;margin-bottom:.4rem;}
-.arch-node-title{font-family:var(–display);font-size:.7rem;font-weight:700;color:var(–text);margin-bottom:.2rem;}
-.arch-node-sub{font-family:var(–mono);font-size:.55rem;color:var(–text-3);line-height:1.4;}
-.arch-arrow{color:var(–teal);font-size:1.1rem;flex-shrink:0;opacity:.6;}
+.arch-node-title{font-family:var(--display);font-size:.7rem;font-weight:700;color:var(--text);margin-bottom:.2rem;}
+.arch-node-sub{font-family:var(--mono);font-size:.55rem;color:var(--text-3);line-height:1.4;}
+.arch-arrow{color:var(--teal);font-size:1.1rem;flex-shrink:0;opacity:.6;}
 
 .agent-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-bottom:2rem;}
-.agent-card{background:var(–surface);border:1px solid var(–border);padding:1.8rem;transition:border-color .3s,transform .2s;position:relative;}
+.agent-card{background:var(--surface);border:1px solid var(--border);padding:1.8rem;transition:border-color .3s,transform .2s;position:relative;}
 .agent-card:hover{transform:translateY(-3px);}
 .ac-live{border-color:rgba(34,201,122,.2);background:linear-gradient(150deg,rgba(34,201,122,.04),transparent);}
 .ac-live:hover{border-color:rgba(34,201,122,.45);}
 .ac-explore{border-color:rgba(167,139,250,.2);background:linear-gradient(150deg,rgba(167,139,250,.04),transparent);}
 .ac-explore:hover{border-color:rgba(167,139,250,.4);}
-.ac-status{font-family:var(–mono);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.75rem;}
-.ac-status.live{color:var(–green);}
-.ac-status.explore{color:var(–purple);}
+.ac-status{font-family:var(--mono);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.75rem;}
+.ac-status.live{color:var(--green);}
+.ac-status.explore{color:var(--purple);}
 .ac-icon{font-size:1.7rem;margin-bottom:.6rem;display:block;}
-.ac-title{font-family:var(–display);font-weight:700;font-size:.88rem;color:var(–text);margin-bottom:.5rem;}
-.ac-desc{font-size:.8rem;color:var(–text-2);line-height:1.68;margin-bottom:.85rem;}
-.atag{font-family:var(–mono);font-size:.57rem;padding:.12rem .45rem;border:1px solid rgba(0,212,196,.15);color:rgba(0,212,196,.6);display:inline-block;margin:.15rem .1rem 0 0;}
+.ac-title{font-family:var(--display);font-weight:700;font-size:.88rem;color:var(--text);margin-bottom:.5rem;}
+.ac-desc{font-size:.8rem;color:var(--text-2);line-height:1.68;margin-bottom:.85rem;}
+.atag{font-family:var(--mono);font-size:.57rem;padding:.12rem .45rem;border:1px solid rgba(0,212,196,.15);color:rgba(0,212,196,.6);display:inline-block;margin:.15rem .1rem 0 0;}
 .ac-explore .atag{border-color:rgba(167,139,250,.2);color:rgba(196,167,255,.65);}
 
 .nlp-note{border:1px solid rgba(0,212,196,.15);background:rgba(0,212,196,.03);padding:2rem;}
 .nlp-note-inner{display:grid;grid-template-columns:1.2fr 1fr;gap:2.5rem;align-items:start;}
-.nlp-title{font-family:var(–display);font-weight:700;font-size:.92rem;color:var(–text);margin-bottom:.6rem;}
-.nlp-desc{font-size:.82rem;color:var(–text-2);line-height:1.72;}
+.nlp-title{font-family:var(--display);font-weight:700;font-size:.92rem;color:var(--text);margin-bottom:.6rem;}
+.nlp-desc{font-size:.82rem;color:var(--text-2);line-height:1.72;}
 .nlp-chips{display:flex;flex-wrap:wrap;gap:.38rem;align-content:flex-start;}
-.nchip{font-family:var(–mono);font-size:.6rem;padding:.22rem .6rem;border:1px solid rgba(0,212,196,.2);color:rgba(0,212,196,.72);background:rgba(0,212,196,.04);}
+.nchip{font-family:var(--mono);font-size:.6rem;padding:.22rem .6rem;border:1px solid rgba(0,212,196,.2);color:rgba(0,212,196,.72);background:rgba(0,212,196,.04);}
 
 /* ─── RESEARCH & WRITING ─────────────────────────────────── */
-#research{padding:6rem 0;background:var(–bg2);border-top:1px solid var(–border);}
+#research{padding:6rem 0;background:var(--bg2);border-top:1px solid var(--border);}
 .rw-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;margin-bottom:2.5rem;}
-.rw-card{background:var(–bg);border:1px solid var(–border);padding:2.2rem;transition:border-color .3s;}
+.rw-card{background:var(--bg);border:1px solid var(--border);padding:2.2rem;transition:border-color .3s;}
 .rw-card:hover{border-color:rgba(0,212,196,.25);}
 .rw-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;flex-wrap:wrap;gap:.5rem;}
-.rw-tag{font-family:var(–mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(–teal);border:1px solid rgba(0,212,196,.25);padding:.18rem .55rem;}
-.rw-date{font-family:var(–mono);font-size:.6rem;color:var(–text-3);}
-.rw-title{font-family:var(–display);font-weight:700;font-size:1rem;color:var(–text);line-height:1.3;margin-bottom:.3rem;}
-.rw-subtitle{font-family:var(–mono);font-size:.65rem;color:var(–text-3);margin-bottom:1rem;line-height:1.4;}
-.rw-abstract{font-size:.83rem;color:var(–text-2);line-height:1.75;margin-bottom:1.2rem;padding-bottom:1.2rem;border-bottom:1px solid var(–border);}
+.rw-tag{font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);border:1px solid rgba(0,212,196,.25);padding:.18rem .55rem;}
+.rw-date{font-family:var(--mono);font-size:.6rem;color:var(--text-3);}
+.rw-title{font-family:var(--display);font-weight:700;font-size:1rem;color:var(--text);line-height:1.3;margin-bottom:.3rem;}
+.rw-subtitle{font-family:var(--mono);font-size:.65rem;color:var(--text-3);margin-bottom:1rem;line-height:1.4;}
+.rw-abstract{font-size:.83rem;color:var(--text-2);line-height:1.75;margin-bottom:1.2rem;padding-bottom:1.2rem;border-bottom:1px solid var(--border);}
 .rw-insights{margin-bottom:1.2rem;}
-.rw-insight-title{font-family:var(–mono);font-size:.62rem;color:var(–gold);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.65rem;}
-.rw-insight{font-size:.8rem;color:var(–text-2);padding:.3rem 0 .3rem 1rem;border-left:2px solid rgba(0,212,196,.2);margin-bottom:.4rem;line-height:1.6;}
+.rw-insight-title{font-family:var(--mono);font-size:.62rem;color:var(--gold);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.65rem;}
+.rw-insight{font-size:.8rem;color:var(--text-2);padding:.3rem 0 .3rem 1rem;border-left:2px solid rgba(0,212,196,.2);margin-bottom:.4rem;line-height:1.6;}
 .rw-footer{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:.6rem;}
 .rw-themes{display:flex;flex-wrap:wrap;gap:.28rem;}
-.rtheme{font-family:var(–mono);font-size:.57rem;padding:.12rem .45rem;border:1px solid rgba(240,180,41,.2);color:rgba(240,180,41,.7);}
-.rw-status{font-family:var(–mono);font-size:.58rem;color:var(–text-3);}
+.rtheme{font-family:var(--mono);font-size:.57rem;padding:.12rem .45rem;border:1px solid rgba(240,180,41,.2);color:rgba(240,180,41,.7);}
+.rw-status{font-family:var(--mono);font-size:.58rem;color:var(--text-3);}
 
-.ri-bar{border:1px solid var(–border);padding:1.5rem 2rem;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
-.ri-label{font-family:var(–mono);font-size:.63rem;color:var(–teal);letter-spacing:.15em;text-transform:uppercase;flex-shrink:0;}
+.ri-bar{border:1px solid var(--border);padding:1.5rem 2rem;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
+.ri-label{font-family:var(--mono);font-size:.63rem;color:var(--teal);letter-spacing:.15em;text-transform:uppercase;flex-shrink:0;}
 .ri-items{display:flex;flex-wrap:wrap;gap:.4rem;}
-.ri-item{font-family:var(–mono);font-size:.67rem;padding:.24rem .7rem;border:1px solid var(–border);color:var(–text-2);}
+.ri-item{font-family:var(--mono);font-size:.67rem;padding:.24rem .7rem;border:1px solid var(--border);color:var(--text-2);}
 
 @media(max-width:920px){
-.agent-grid{grid-template-columns:1fr;}
-.nlp-note-inner{grid-template-columns:1fr;}
-.rw-grid{grid-template-columns:1fr;}
+  .agent-grid{grid-template-columns:1fr;}
+  .nlp-note-inner{grid-template-columns:1fr;}
+  .rw-grid{grid-template-columns:1fr;}
 }
 
 /* ─── EMAIL FLOW ─────────────────────────────────────────── */
 .email-flow{background:rgba(0,0,0,.25);border:1px solid rgba(167,139,250,.15);padding:1rem;margin:.9rem 0 1rem;overflow-x:auto;}
-.ef-title{font-family:var(–mono);font-size:.58rem;color:var(–purple);letter-spacing:.12em;margin-bottom:.75rem;}
+.ef-title{font-family:var(--mono);font-size:.58rem;color:var(--purple);letter-spacing:.12em;margin-bottom:.75rem;}
 .ef-steps{display:flex;align-items:center;gap:.3rem;min-width:480px;}
-.ef-step{flex:1;text-align:center;padding:.55rem .3rem;background:var(–surface2);border:1px solid var(–border);min-width:72px;}
+.ef-step{flex:1;text-align:center;padding:.55rem .3rem;background:var(--surface2);border:1px solid var(--border);min-width:72px;}
 .ef-step-highlight{border-color:rgba(167,139,250,.4);background:rgba(167,139,250,.08);}
 .ef-icon{font-size:1rem;margin-bottom:.2rem;}
-.ef-label{font-family:var(–display);font-size:.58rem;font-weight:700;color:var(–text);line-height:1.2;margin-bottom:.18rem;}
-.ef-sub{font-family:var(–mono);font-size:.5rem;color:var(–text-3);line-height:1.3;}
-.ef-arrow{color:var(–purple);font-size:.8rem;opacity:.6;flex-shrink:0;}
-.ef-note{font-family:var(–mono);font-size:.56rem;color:var(–text-3);margin-top:.65rem;line-height:1.5;border-top:1px solid var(–border);padding-top:.5rem;}
+.ef-label{font-family:var(--display);font-size:.58rem;font-weight:700;color:var(--text);line-height:1.2;margin-bottom:.18rem;}
+.ef-sub{font-family:var(--mono);font-size:.5rem;color:var(--text-3);line-height:1.3;}
+.ef-arrow{color:var(--purple);font-size:.8rem;opacity:.6;flex-shrink:0;}
+.ef-note{font-family:var(--mono);font-size:.56rem;color:var(--text-3);margin-top:.65rem;line-height:1.5;border-top:1px solid var(--border);padding-top:.5rem;}
 
 /* ─── PROFILE SUMMARY ────────────────────────────────────── */
-.profile-summary{border-left:3px solid var(–teal);padding:.9rem 1.4rem;margin-bottom:2rem;background:rgba(0,212,196,.04);display:flex;align-items:flex-start;gap:1.2rem;}
-.ps-label{font-family:var(–mono);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(–teal);flex-shrink:0;padding-top:.18rem;}
-.ps-text{font-size:.9rem;color:var(–text-2);line-height:1.78;margin:0;}
-.ps-text strong{color:var(–text);}
+.profile-summary{border-left:3px solid var(--teal);padding:.9rem 1.4rem;margin-bottom:2rem;background:rgba(0,212,196,.04);display:flex;align-items:flex-start;gap:1.2rem;}
+.ps-label{font-family:var(--mono);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);flex-shrink:0;padding-top:.18rem;}
+.ps-text{font-size:.9rem;color:var(--text-2);line-height:1.78;margin:0;}
+.ps-text strong{color:var(--text);}
 
 /* ─── LOADER ─────────────────────────────────────────────── */
 #loader{position:fixed;inset:0;background:#07101e;z-index:9000;display:flex;flex-direction:column;align-items:center;justify-content:center;animation:loaderOut 0.6s ease 3s forwards;}
 @keyframes loaderOut{0%{opacity:1;pointer-events:all;}99%{opacity:0;pointer-events:none;}100%{opacity:0;display:none;pointer-events:none;}}
-.lc{font-family:“Fira Code”,monospace;font-size:.72rem;color:#7a9bae;width:min(520px,90vw);margin-bottom:2rem;line-height:2;}
+.lc{font-family:"Fira Code",monospace;font-size:.72rem;color:#7a9bae;width:min(520px,90vw);margin-bottom:2rem;line-height:2;}
 .lline{opacity:0;}
 .ll1{animation:fadeIn .3s ease .2s forwards;}
 .ll2{animation:fadeIn .3s ease .5s forwards;}
@@ -441,19 +440,153 @@ footer{flex-direction:column;gap:.4rem;text-align:center;}
 .ll7{animation:fadeIn .3s ease 1.8s forwards;}
 @keyframes fadeIn{to{opacity:1;}}
 .lbar{width:min(520px,90vw);height:2px;background:rgba(0,212,196,.15);overflow:hidden;margin-bottom:.8rem;}
-.lfill{height:100%;background:var(–teal, #00d4c4);animation:fillBar 2.5s ease forwards;}
+.lfill{height:100%;background:var(--teal, #00d4c4);animation:fillBar 2.5s ease forwards;}
 @keyframes fillBar{0%{width:0%;}100%{width:100%;}}
-.lpct{font-family:“Fira Code”,monospace;font-size:.65rem;color:#00d4c4;animation:countUp 2.5s ease forwards;}
+.lpct{font-family:"Fira Code",monospace;font-size:.65rem;color:#00d4c4;animation:countUp 2.5s ease forwards;}
 .lg{color:#00d4c4;}.lb{color:#f0b429;}.lh{color:#a78bfa;}
 .rv,.rv-l,.rv-r,.rv.on,.rv-l.on,.rv-r.on{opacity:1!important;transform:none!important;visibility:visible!important;}
-</style>
 
+/* ─── COLOR & CONTRAST BOOST ─────────────────────────────── */
+:root{
+  --teal:#00e8d6;
+  --gold:#f6c90e;
+  --bg:#050d18;
+  --bg2:#081222;
+  --text:#eef4fa;
+  --text-2:#bdd0df;
+  --text-3:#7a9bae;
+  --border:rgba(0,232,214,0.12);
+  --surface:rgba(255,255,255,0.035);
+}
+/* Stats numbers — always visible, vivid */
+.s-num{color:#00e8d6!important;font-size:2.8rem!important;opacity:1!important;}
+.s-label{color:#bdd0df!important;opacity:1!important;}
+.s-cell{opacity:1!important;visibility:visible!important;}
+.stats-grid{opacity:1!important;}
+/* Ensure all text visible */
+.sec-title,.sec-sub,.eyebrow{opacity:1!important;transform:none!important;}
+
+/* ─── LIGHT MODE (day) ───────────────────────────────────── */
+@media(prefers-color-scheme:light){
+  :root{
+    --bg:#f0f4f8;
+    --bg2:#e2eaf2;
+    --surface:rgba(0,0,0,0.04);
+    --surface2:rgba(0,0,0,0.07);
+    --teal:#0099a8;
+    --gold:#c47f00;
+    --green:#1a9e5e;
+    --purple:#6d4fc2;
+    --text:#0d1b2a;
+    --text-2:#2d4a62;
+    --text-3:#5a7a94;
+    --muted:#8aabb8;
+    --border:rgba(0,153,168,0.2);
+  }
+  body{background:var(--bg);}
+  nav{background:rgba(240,244,248,0.95);border-bottom:1px solid rgba(0,153,168,0.15);}
+  .s-cell{background:rgba(0,0,0,0.04);border-color:rgba(0,153,168,0.15);}
+  .pc,.agent-card,.rw-card,.gov-card,.cert-card{background:var(--bg2);border-color:rgba(0,0,0,0.1);}
+  .hero-hl,.about-text{color:var(--text);}
+  #loader{background:var(--bg);}
+  .lc,.lline{color:var(--text-2);}
+  .marquee-track{background:var(--bg2);}
+  .timeline-item,.ti-role{color:var(--text);}
+  .contact-inner{background:var(--bg2);}
+  .sec-title{color:var(--text);}
+  .worth-box{background:var(--bg2);border-color:var(--border);}
+}
+
+/* ─── MOBILE COMPREHENSIVE ───────────────────────────────── */
+@media(max-width:768px){
+  /* Typography scale down */
+  .hero-name{font-size:clamp(2.8rem,12vw,5rem)!important;}
+  .hero-name-last{font-size:clamp(3rem,14vw,6rem)!important;}
+  .hero-hl{font-size:clamp(.85rem,3.5vw,1rem)!important;line-height:1.7;}
+  .sec-title{font-size:clamp(1.6rem,6vw,2.5rem)!important;}
+  
+  /* Hero — single column, photo hidden on small screens */
+  .hero-inner{grid-template-columns:1fr!important;padding:6rem 1.2rem 3rem!important;}
+  .hero-right{display:none!important;}
+  .hero-left{text-align:center;}
+  .hero-badges{justify-content:center;}
+  .hero-ctas{flex-wrap:wrap;justify-content:center;gap:.6rem;}
+  .btn{padding:.7rem 1.2rem!important;font-size:.7rem!important;}
+  
+  /* Nav — cleaner mobile */
+  nav{padding:.8rem 1.2rem!important;}
+  .nav-links{display:none!important;}
+  .nav-logo{font-size:.9rem!important;}
+  
+  /* Stats grid — 2 cols on mobile */
+  .stats-grid{grid-template-columns:repeat(2,1fr)!important;gap:.8rem!important;}
+  .s-num{font-size:2rem!important;}
+  
+  /* About — single col */
+  .about-grid{grid-template-columns:1fr!important;gap:2rem!important;}
+  
+  /* Projects — full width cards */
+  .proj-scroll{padding:0 1.2rem!important;}
+  .pc{min-width:280px!important;max-width:320px!important;}
+  
+  /* Agentic flow — scrollable */
+  .arch-flow{min-width:500px;overflow-x:auto;}
+  .agent-grid{grid-template-columns:1fr!important;gap:1rem!important;}
+  
+  /* Research cards */
+  .rw-grid{grid-template-columns:1fr!important;}
+  
+  /* Skills */
+  .skills-grid{grid-template-columns:1fr!important;}
+  
+  /* Career timeline */
+  .timeline{padding-left:1rem!important;}
+  
+  /* Contact */
+  .contact-ctas{flex-direction:column!important;gap:.7rem!important;}
+  .contact-ctas .btn{width:100%!important;text-align:center!important;}
+  .contact-info-grid{grid-template-columns:1fr!important;}
+  
+  /* General padding */
+  .wrap{padding-left:1.2rem!important;padding-right:1.2rem!important;}
+  section{padding:3.5rem 0!important;}
+  
+  /* Marquee — smaller text */
+  .m-item{font-size:.55rem!important;}
+
+  /* Testimonials */
+  .testi-grid{grid-template-columns:1fr!important;}
+  
+  /* Governance cards */
+  .gov-grid{grid-template-columns:1fr!important;}
+  
+  /* Sectors */
+  .sectors-grid{grid-template-columns:repeat(2,1fr)!important;}
+  
+  /* Email flow */
+  .ef-steps{min-width:420px;}
+  .email-flow{overflow-x:auto;}
+  
+  /* Certs grid */
+  .certs-grid{grid-template-columns:repeat(2,1fr)!important;}
+  
+  /* Research interest bar */
+  .ri-bar{flex-direction:column;gap:.8rem;}
+}
+
+/* Very small screens */
+@media(max-width:400px){
+  .hero-name{font-size:2.4rem!important;}
+  .hero-name-last{font-size:2.8rem!important;}
+  .stats-grid{grid-template-columns:1fr!important;}
+  .certs-grid{grid-template-columns:1fr!important;}
+}
+</style>
 </head>
 <body>
 <div id="cd"></div><div id="cr"></div><div id="sp"></div>
 
 <!-- LOADER -->
-
 <div id="loader">
   <div class="lc" id="lc">
     <div class="lline ll1">initialising <span class="lg">SHIVANI.A</span> · portfolio</div>
@@ -469,7 +602,6 @@ footer{flex-direction:column;gap:.4rem;text-align:center;}
 </div>
 
 <!-- NAV -->
-
 <nav>
   <a href="#hero" class="nav-logo">SHIVANI.A</a>
   <ul class="nav-links">
@@ -488,7 +620,6 @@ footer{flex-direction:column;gap:.4rem;text-align:center;}
 </nav>
 
 <!-- HERO -->
-
 <section id="hero">
   <div class="hero-inner">
     <div>
@@ -532,57 +663,50 @@ footer{flex-direction:column;gap:.4rem;text-align:center;}
 </section>
 
 <!-- MARQUEE -->
-
 <div class="marquee-wrap"><div class="marquee-track">
   <span class="m-item"><span>◆</span>Azure Databricks</span><span class="m-item"><span>◆</span>LangChain · Agentic AI</span><span class="m-item"><span>◆</span>Medallion Architecture</span><span class="m-item"><span>◆</span>Delta Live Tables</span><span class="m-item"><span>◆</span>Unity Catalog</span><span class="m-item"><span>◆</span>NLP · NER · Text AI</span><span class="m-item"><span>◆</span>OCR · Document Digitization</span><span class="m-item"><span>◆</span>Microsoft Purview</span><span class="m-item"><span>◆</span>MLflow · MLOps</span><span class="m-item"><span>◆</span>RAG Workflows</span><span class="m-item"><span>◆</span>Financial Modelling</span><span class="m-item"><span>◆</span>ESG · SASB</span><span class="m-item"><span>◆</span>ICD-10 · Shafafiya</span><span class="m-item"><span>◆</span>PySpark · Python</span><span class="m-item"><span>◆</span>AWS SageMaker</span><span class="m-item"><span>◆</span>Blue Prism RPA</span><span class="m-item"><span>◆</span>Power BI</span>
   <span class="m-item"><span>◆</span>Azure Databricks</span><span class="m-item"><span>◆</span>LangChain · Agentic AI</span><span class="m-item"><span>◆</span>Medallion Architecture</span><span class="m-item"><span>◆</span>Delta Live Tables</span><span class="m-item"><span>◆</span>Unity Catalog</span><span class="m-item"><span>◆</span>NLP · NER · Text AI</span><span class="m-item"><span>◆</span>OCR · Document Digitization</span><span class="m-item"><span>◆</span>Microsoft Purview</span><span class="m-item"><span>◆</span>MLflow · MLOps</span><span class="m-item"><span>◆</span>RAG Workflows</span><span class="m-item"><span>◆</span>Financial Modelling</span><span class="m-item"><span>◆</span>ESG · SASB</span><span class="m-item"><span>◆</span>ICD-10 · Shafafiya</span><span class="m-item"><span>◆</span>PySpark · Python</span><span class="m-item"><span>◆</span>AWS SageMaker</span><span class="m-item"><span>◆</span>Blue Prism RPA</span><span class="m-item"><span>◆</span>Power BI</span>
 </div></div>
 
 <!-- STATS -->
-
-<section id="stats"><div class="wrap">
+<section id="stats" style="opacity:1;visibility:visible;"><div class="wrap">
   <div class="stats-grid rv">
-    <div class="s-cell"><span class="s-num" data-v="10">0</span><span class="s-label">Years Experience</span></div>
-    <div class="s-cell"><span class="s-num" data-v="8">0</span><span class="s-label">Industries Served</span></div>
-    <div class="s-cell"><span class="s-num" data-v="5">0</span><span class="s-label">Countries Deployed</span></div>
-    <div class="s-cell"><span class="s-num" data-v="96">0</span><span class="s-label">ML Monitoring Modules</span></div>
-    <div class="s-cell"><span class="s-num" data-v="100">0</span><span class="s-label">Processes Automated</span></div>
-    <div class="s-cell"><span class="s-num" data-v="8">0</span><span class="s-label">Enterprise Projects at EY</span></div>
+    <div class="s-cell"><span class="s-num" data-v="10">10+</span><span class="s-label">Years Experience</span></div>
+    <div class="s-cell"><span class="s-num" data-v="8">8+</span><span class="s-label">Industries Served</span></div>
+    <div class="s-cell"><span class="s-num" data-v="5">5+</span><span class="s-label">Countries Deployed</span></div>
+    <div class="s-cell"><span class="s-num" data-v="96">96+</span><span class="s-label">ML Monitoring Modules</span></div>
+    <div class="s-cell"><span class="s-num" data-v="100">100+</span><span class="s-label">Processes Automated</span></div>
+    <div class="s-cell"><span class="s-num" data-v="8">8+</span><span class="s-label">Enterprise Projects at EY</span></div>
   </div>
 </div></section>
 
 <!-- ABOUT -->
-
 <section id="about"><div class="wrap">
   <div class="about-grid">
     <div class="rv-l" style="position:relative;">
-
-```
-  <div class="about-frame-deco"></div>
-  <div class="about-cap">Shivani Aggarwal · Lead Architect · Fractal AI · Abu Dhabi</div>
-</div>
-<div class="rv-r">
-  <div class="eyebrow">About</div>
-  <h2 class="sec-title">A rare intersection of depth and breadth.</h2>
-  <p class="about-text">The current work sits at the centre of Abu Dhabi's national AI ambition. As Lead Data &amp; AI Architect at <strong>Fractal AI</strong>, the role involves architecting the <strong>Population Health Intelligence platform</strong> — a Microsoft-partnered initiative that integrates clinical, lifestyle, and environmental signals across an entire emirate's population. As the UAE moves to become the world's first AI-native government, this is the kind of infrastructure that makes that possible. Very few data professionals globally have built at this level.</p>
-  <p class="about-text">The path here wasn't linear — it was deliberate. <strong>Infosys → EY LLP → Fractal Analytics → Fractal AI</strong> across India, Belgium, and the UAE — each move chosen for depth, not comfort. At EY, eight enterprise projects delivered end-to-end with no handoffs: NLP pipelines for Fidelity International, SASB-aligned carbon intelligence for AB InBev and Castrol, ML deployed in Belgium at ArcelorMittal. The discipline formed there — owning every layer from architecture through go-live — is the one that shows up on every engagement since.</p>
-  <p class="about-text">What makes this profile genuinely unusual is what sits <strong>above</strong> the technical layer. A CFA Level I credential means financial analysis is native, not translated — data platforms get positioned in ROI terms, ESG carries real accounting rigour, and AI governance lands with regulatory precision. Add original research on AI taxation law and carbon modelling as fiscal strategy, and the result is someone who doesn't just build the system — they understand exactly what it costs, what it's worth, and how to defend it in the boardroom.</p>
-  <div class="worthy">
-    <div class="worthy-title">✦ What I bring that's genuinely rare</div>
-    <div class="w-item">Architecting national-scale AI in Abu Dhabi as the UAE builds toward the world's first AI-native government — very few practitioners globally have worked at this level</div>
-      <div class="w-item">The only profile combining: Databricks Architect + CFA Level I + published AI taxation research + GCC government delivery</div>
-      <div class="w-item">Proven cross-domain depth across healthcare, ESG, finance, manufacturing, and aviation — not generalism, but genuine pattern recognition across high-stakes verticals</div>
-      <div class="w-item">UAE residency, Abu Dhabi government relationships, and in-country delivery track record — ready to contribute from day one</div>
-      <div class="w-item">Full lifecycle ownership every time — the architect who can walk into a boardroom and a Databricks cluster on the same morning</div>
-  </div>
-</div>
-```
-
+      
+      <div class="about-frame-deco"></div>
+      <div class="about-cap">Shivani Aggarwal · Lead Architect · Fractal AI · Abu Dhabi</div>
+    </div>
+    <div class="rv-r">
+      <div class="eyebrow">About</div>
+      <h2 class="sec-title">A rare intersection of depth and breadth.</h2>
+      <p class="about-text">The current work sits at the centre of Abu Dhabi's national AI ambition. As Lead Data &amp; AI Architect at <strong>Fractal AI</strong>, the role involves architecting the <strong>Population Health Intelligence platform</strong> — a Microsoft-partnered initiative that integrates clinical, lifestyle, and environmental signals across an entire emirate's population. As the UAE moves to become the world's first AI-native government, this is the kind of infrastructure that makes that possible. Very few data professionals globally have built at this level.</p>
+      <p class="about-text">The path here wasn't linear — it was deliberate. <strong>Infosys → EY LLP → Fractal Analytics → Fractal AI</strong> across India, Belgium, and the UAE — each move chosen for depth, not comfort. At EY, eight enterprise projects delivered end-to-end with no handoffs: NLP pipelines for Fidelity International, SASB-aligned carbon intelligence for AB InBev and Castrol, ML deployed in Belgium at ArcelorMittal. The discipline formed there — owning every layer from architecture through go-live — is the one that shows up on every engagement since.</p>
+      <p class="about-text">What makes this profile genuinely unusual is what sits <strong>above</strong> the technical layer. A CFA Level I credential means financial analysis is native, not translated — data platforms get positioned in ROI terms, ESG carries real accounting rigour, and AI governance lands with regulatory precision. Add original research on AI taxation law and carbon modelling as fiscal strategy, and the result is someone who doesn't just build the system — they understand exactly what it costs, what it's worth, and how to defend it in the boardroom.</p>
+      <div class="worthy">
+        <div class="worthy-title">✦ What I bring that's genuinely rare</div>
+        <div class="w-item">Architecting national-scale AI in Abu Dhabi as the UAE builds toward the world's first AI-native government — very few practitioners globally have worked at this level</div>
+          <div class="w-item">The only profile combining: Databricks Architect + CFA Level I + published AI taxation research + GCC government delivery</div>
+          <div class="w-item">Proven cross-domain depth across healthcare, ESG, finance, manufacturing, and aviation — not generalism, but genuine pattern recognition across high-stakes verticals</div>
+          <div class="w-item">UAE residency, Abu Dhabi government relationships, and in-country delivery track record — ready to contribute from day one</div>
+          <div class="w-item">Full lifecycle ownership every time — the architect who can walk into a boardroom and a Databricks cluster on the same morning</div>
+      </div>
+    </div>
   </div>
 </div></section>
 
 <!-- PIPELINE -->
-
 <section id="pipeline"><div class="wrap">
   <div style="text-align:center;margin-bottom:3.5rem;" class="rv">
     <div class="eyebrow" style="justify-content:center;">Core Architecture Pattern</div>
@@ -617,7 +741,6 @@ footer{flex-direction:column;gap:.4rem;text-align:center;}
 <!-- ══════════════════════════════════════════════════════
      PROJECTS — split into EY era and Fractal era
      ══════════════════════════════════════════════════════ -->
-
 <section id="projects">
   <div class="wrap" style="padding-bottom:1.2rem;">
     <div class="eyebrow rv">Selected Projects</div>
@@ -626,7 +749,6 @@ footer{flex-direction:column;gap:.4rem;text-align:center;}
   </div>
 
   <!-- ── EY LLP ERA ──────────────────────────────────────── -->
-
   <div class="proj-era rv">
     <div class="era-header">
       <div class="era-line"></div>
@@ -637,107 +759,104 @@ footer{flex-direction:column;gap:.4rem;text-align:center;}
   </div>
   <div class="proj-scroll" id="ps-ey"><div class="proj-track" id="pt-ey">
 
-```
-<!-- ESG CARBON — close to heart, flagship gold -->
-<div class="pc ey-f">
-  <div class="pc-era ey-l">♻️ EY LLP · ESG · SASB · Flagship</div>
-  <span class="pc-icon">🌿</span>
-  <div class="pc-title">Carbon Intelligence — AB InBev &amp; Castrol</div>
-  <div class="pc-desc"><strong>SASB-aligned ESG analytics</strong> for the world's largest brewer and one of the world's most recognised Oil &amp; Gas brands. Built carbon footprint tracking platforms using COGS data — monthly plant, vendor, and raw material emissions insights. Calculated E-scores, mapped activities to SDG goals, and delivered <strong>board-level sustainability reporting</strong> that clients could act on.</div>
-  <div class="pc-tags"><span class="tag ey-tag">PySpark</span><span class="tag ey-tag">Azure ADF</span><span class="tag ey-tag">Databricks</span><span class="tag ey-tag">Power BI</span><span class="tag ey-tag">SASB Framework</span><span class="tag ey-tag">SDG Mapping</span><span class="tag ey-tag">E-Score</span><span class="tag ey-tag">COGS Analytics</span></div>
-  <div class="pc-impact">SASB E-score platform · Board sustainability reporting · AB InBev + Castrol · EY 2022</div>
-</div>
-
-<!-- FIDELITY — NLP flagship gold -->
-<div class="pc ey-f">
-  <div class="pc-era ey-l">📄 EY LLP · NLP · Document AI · Flagship</div>
-  <span class="pc-icon">🏦</span>
-  <div class="pc-title">Fidelity International — 50+ Process Automation</div>
-  <div class="pc-desc">Led intelligence automation of 50+ document-heavy workflows for one of the world's largest fund managers. <strong>NLP classification, NER extraction, OCR-to-searchable-PDF conversion</strong> (Tesseract + Azure Computer Vision), key-value parsing — replacing months of manual analyst effort across compliance and operations. Deployed via Flask API into live production.</div>
-  <div class="pc-tags"><span class="tag ey-tag">NLP · NER</span><span class="tag ey-tag">OCR · Tesseract</span><span class="tag ey-tag">Azure CV</span><span class="tag ey-tag">Flask API</span><span class="tag ey-tag">Text Classification</span><span class="tag ey-tag">Key-Value Extraction</span><span class="tag ey-tag">Document Intelligence</span></div>
-  <div class="pc-impact">50+ processes automated · Document intelligence at scale · Fidelity International · EY 2020–22</div>
-</div>
-
-<!-- ARCELORMITTAL -->
-<div class="pc ey">
-  <div class="pc-era ey-p">🏗️ EY LLP · NLP + RPA · Belgium 🇧🇪</div>
-  <span class="pc-icon">⚙️</span>
-  <div class="pc-title">ArcelorMittal — Steel Spec Intelligence</div>
-  <div class="pc-desc">Deployed at ArcelorMittal's Genk, Belgium plant for the world's largest steel producer. Built an ML + Blue Prism RPA pipeline that reads free-text steel specifications from purchase orders, classifies them across 10+ product categories using <strong>Azure LUIS NLP</strong>, and routes them automatically — eliminating cross-border manual reconciliation between Luxembourg HQ and the Belgium plant.</div>
-  <div class="pc-tags"><span class="tag ey-p-tag">NLP · Azure LUIS</span><span class="tag ey-p-tag">Blue Prism RPA</span><span class="tag ey-p-tag">Flask API</span><span class="tag ey-p-tag">Text Classification</span><span class="tag ey-p-tag">Python</span></div>
-  <div class="pc-impact">International NLP/RPA deployment · ArcelorMittal Belgium · EY 2021</div>
-</div>
-
-<!-- AMEX KYC -->
-<div class="pc ey">
-  <div class="pc-era ey-p">💳 EY LLP · OCR · KYC · Banking</div>
-  <span class="pc-icon">🔍</span>
-  <div class="pc-title">American Express — KYC Document Intelligence</div>
-  <div class="pc-desc">Built OCR + NLP solution automating KYC for non-person entities — Azure Blob storage, <strong>Azure Computer Vision OCR</strong>, Python NLP data cleaning and entity extraction. Reduced manual compliance processing for one of the world's most recognisable financial brands. Part of a multi-entity Amex RPA programme (18 web, Windows, and mainframe processes automated).</div>
-  <div class="pc-tags"><span class="tag ey-p-tag">Azure Computer Vision</span><span class="tag ey-p-tag">OCR · NER</span><span class="tag ey-p-tag">Python</span><span class="tag ey-p-tag">Azure Blobs</span><span class="tag ey-p-tag">Blue Prism</span></div>
-  <div class="pc-impact">KYC automation · American Express · EY Analytics</div>
-</div>
-
-<!-- EMAIL CLASSIFICATION -->
-<div class="pc ey">
-  <div class="pc-era ey-p">📧 EY Internal · NLP · Production</div>
-  <span class="pc-icon">🤖</span>
-  <div class="pc-title">NLP Email Classification — Mediclaim</div>
-  <div class="pc-desc">Near real-time ML pipeline classifying incoming Mediclaim emails by subject, intent, and content — routing them automatically to the correct handling team without human triage. Built as a <strong>Flask API</strong> deployed into EY's internal operations, processing live email traffic with sub-second inference.</div>
-
-  <!-- PROCESS FLOW EMBED -->
-  <div class="email-flow">
-    <div class="ef-title">// Pipeline Architecture</div>
-    <div class="ef-steps">
-      <div class="ef-step">
-        <div class="ef-icon">📥</div>
-        <div class="ef-label">Inbound Email</div>
-        <div class="ef-sub">Raw text + metadata</div>
-      </div>
-      <div class="ef-arrow">→</div>
-      <div class="ef-step">
-        <div class="ef-icon">🧹</div>
-        <div class="ef-label">Pre-processing</div>
-        <div class="ef-sub">Tokenise · Stopwords · Normalise</div>
-      </div>
-      <div class="ef-arrow">→</div>
-      <div class="ef-step">
-        <div class="ef-icon">🧠</div>
-        <div class="ef-label">NLP Classifier</div>
-        <div class="ef-sub">TF-IDF · ML Model · Intent</div>
-      </div>
-      <div class="ef-arrow">→</div>
-      <div class="ef-step ef-step-highlight">
-        <div class="ef-icon">🏷️</div>
-        <div class="ef-label">Class Label</div>
-        <div class="ef-sub">Category + Confidence</div>
-      </div>
-      <div class="ef-arrow">→</div>
-      <div class="ef-step">
-        <div class="ef-icon">🚦</div>
-        <div class="ef-label">Auto-Route</div>
-        <div class="ef-sub">Flask API → Team Queue</div>
-      </div>
+    <!-- ESG CARBON — close to heart, flagship gold -->
+    <div class="pc ey-f">
+      <div class="pc-era ey-l">♻️ EY LLP · ESG · SASB · Flagship</div>
+      <span class="pc-icon">🌿</span>
+      <div class="pc-title">Carbon Intelligence — AB InBev &amp; Castrol</div>
+      <div class="pc-desc"><strong>SASB-aligned ESG analytics</strong> for the world's largest brewer and one of the world's most recognised Oil &amp; Gas brands. Built carbon footprint tracking platforms using COGS data — monthly plant, vendor, and raw material emissions insights. Calculated E-scores, mapped activities to SDG goals, and delivered <strong>board-level sustainability reporting</strong> that clients could act on.</div>
+      <div class="pc-tags"><span class="tag ey-tag">PySpark</span><span class="tag ey-tag">Azure ADF</span><span class="tag ey-tag">Databricks</span><span class="tag ey-tag">Power BI</span><span class="tag ey-tag">SASB Framework</span><span class="tag ey-tag">SDG Mapping</span><span class="tag ey-tag">E-Score</span><span class="tag ey-tag">COGS Analytics</span></div>
+      <div class="pc-impact">SASB E-score platform · Board sustainability reporting · AB InBev + Castrol · EY 2022</div>
     </div>
-    <div class="ef-note">Trained on labelled EY Mediclaim corpus · sklearn Pipeline · REST API · Live inference</div>
-  </div>
 
-  <div class="pc-tags">
-    <span class="tag ey-p-tag">NLP · Text Classification</span>
-    <span class="tag ey-p-tag">TF-IDF · sklearn</span>
-    <span class="tag ey-p-tag">Flask API</span>
-    <span class="tag ey-p-tag">Intent Detection</span>
-    <span class="tag ey-p-tag">Python</span>
-    <span class="tag ey-p-tag">Near Real-Time</span>
-  </div>
-  <div class="pc-impact">Live NLP classification · EY internal operations · Zero manual triage</div>
-</div>
-```
+    <!-- FIDELITY — NLP flagship gold -->
+    <div class="pc ey-f">
+      <div class="pc-era ey-l">📄 EY LLP · NLP · Document AI · Flagship</div>
+      <span class="pc-icon">🏦</span>
+      <div class="pc-title">Fidelity International — 50+ Process Automation</div>
+      <div class="pc-desc">Led intelligence automation of 50+ document-heavy workflows for one of the world's largest fund managers. <strong>NLP classification, NER extraction, OCR-to-searchable-PDF conversion</strong> (Tesseract + Azure Computer Vision), key-value parsing — replacing months of manual analyst effort across compliance and operations. Deployed via Flask API into live production.</div>
+      <div class="pc-tags"><span class="tag ey-tag">NLP · NER</span><span class="tag ey-tag">OCR · Tesseract</span><span class="tag ey-tag">Azure CV</span><span class="tag ey-tag">Flask API</span><span class="tag ey-tag">Text Classification</span><span class="tag ey-tag">Key-Value Extraction</span><span class="tag ey-tag">Document Intelligence</span></div>
+      <div class="pc-impact">50+ processes automated · Document intelligence at scale · Fidelity International · EY 2020–22</div>
+    </div>
+
+    <!-- ARCELORMITTAL -->
+    <div class="pc ey">
+      <div class="pc-era ey-p">🏗️ EY LLP · NLP + RPA · Belgium 🇧🇪</div>
+      <span class="pc-icon">⚙️</span>
+      <div class="pc-title">ArcelorMittal — Steel Spec Intelligence</div>
+      <div class="pc-desc">Deployed at ArcelorMittal's Genk, Belgium plant for the world's largest steel producer. Built an ML + Blue Prism RPA pipeline that reads free-text steel specifications from purchase orders, classifies them across 10+ product categories using <strong>Azure LUIS NLP</strong>, and routes them automatically — eliminating cross-border manual reconciliation between Luxembourg HQ and the Belgium plant.</div>
+      <div class="pc-tags"><span class="tag ey-p-tag">NLP · Azure LUIS</span><span class="tag ey-p-tag">Blue Prism RPA</span><span class="tag ey-p-tag">Flask API</span><span class="tag ey-p-tag">Text Classification</span><span class="tag ey-p-tag">Python</span></div>
+      <div class="pc-impact">International NLP/RPA deployment · ArcelorMittal Belgium · EY 2021</div>
+    </div>
+
+    <!-- AMEX KYC -->
+    <div class="pc ey">
+      <div class="pc-era ey-p">💳 EY LLP · OCR · KYC · Banking</div>
+      <span class="pc-icon">🔍</span>
+      <div class="pc-title">American Express — KYC Document Intelligence</div>
+      <div class="pc-desc">Built OCR + NLP solution automating KYC for non-person entities — Azure Blob storage, <strong>Azure Computer Vision OCR</strong>, Python NLP data cleaning and entity extraction. Reduced manual compliance processing for one of the world's most recognisable financial brands. Part of a multi-entity Amex RPA programme (18 web, Windows, and mainframe processes automated).</div>
+      <div class="pc-tags"><span class="tag ey-p-tag">Azure Computer Vision</span><span class="tag ey-p-tag">OCR · NER</span><span class="tag ey-p-tag">Python</span><span class="tag ey-p-tag">Azure Blobs</span><span class="tag ey-p-tag">Blue Prism</span></div>
+      <div class="pc-impact">KYC automation · American Express · EY Analytics</div>
+    </div>
+
+    <!-- EMAIL CLASSIFICATION -->
+    <div class="pc ey">
+      <div class="pc-era ey-p">📧 EY Internal · NLP · Production</div>
+      <span class="pc-icon">🤖</span>
+      <div class="pc-title">NLP Email Classification — Mediclaim</div>
+      <div class="pc-desc">Near real-time ML pipeline classifying incoming Mediclaim emails by subject, intent, and content — routing them automatically to the correct handling team without human triage. Built as a <strong>Flask API</strong> deployed into EY's internal operations, processing live email traffic with sub-second inference.</div>
+
+      <!-- PROCESS FLOW EMBED -->
+      <div class="email-flow">
+        <div class="ef-title">// Pipeline Architecture</div>
+        <div class="ef-steps">
+          <div class="ef-step">
+            <div class="ef-icon">📥</div>
+            <div class="ef-label">Inbound Email</div>
+            <div class="ef-sub">Raw text + metadata</div>
+          </div>
+          <div class="ef-arrow">→</div>
+          <div class="ef-step">
+            <div class="ef-icon">🧹</div>
+            <div class="ef-label">Pre-processing</div>
+            <div class="ef-sub">Tokenise · Stopwords · Normalise</div>
+          </div>
+          <div class="ef-arrow">→</div>
+          <div class="ef-step">
+            <div class="ef-icon">🧠</div>
+            <div class="ef-label">NLP Classifier</div>
+            <div class="ef-sub">TF-IDF · ML Model · Intent</div>
+          </div>
+          <div class="ef-arrow">→</div>
+          <div class="ef-step ef-step-highlight">
+            <div class="ef-icon">🏷️</div>
+            <div class="ef-label">Class Label</div>
+            <div class="ef-sub">Category + Confidence</div>
+          </div>
+          <div class="ef-arrow">→</div>
+          <div class="ef-step">
+            <div class="ef-icon">🚦</div>
+            <div class="ef-label">Auto-Route</div>
+            <div class="ef-sub">Flask API → Team Queue</div>
+          </div>
+        </div>
+        <div class="ef-note">Trained on labelled EY Mediclaim corpus · sklearn Pipeline · REST API · Live inference</div>
+      </div>
+
+      <div class="pc-tags">
+        <span class="tag ey-p-tag">NLP · Text Classification</span>
+        <span class="tag ey-p-tag">TF-IDF · sklearn</span>
+        <span class="tag ey-p-tag">Flask API</span>
+        <span class="tag ey-p-tag">Intent Detection</span>
+        <span class="tag ey-p-tag">Python</span>
+        <span class="tag ey-p-tag">Near Real-Time</span>
+      </div>
+      <div class="pc-impact">Live NLP classification · EY internal operations · Zero manual triage</div>
+    </div>
 
   </div></div>
 
   <!-- ── FRACTAL / DOH ERA ───────────────────────────────── -->
-
   <div class="proj-era rv" style="margin-top:3rem;">
     <div class="era-header">
       <div class="era-line"></div>
@@ -748,72 +867,69 @@ footer{flex-direction:column;gap:.4rem;text-align:center;}
   </div>
   <div class="proj-scroll" id="ps-f"><div class="proj-track" id="pt-f">
 
-```
-<!-- DOH PHI -->
-<div class="pc doh">
-  <div class="pc-era doh-l">🌍 World-First · DOH Abu Dhabi</div>
-  <span class="pc-icon">🏥</span>
-  <div class="pc-title">DOH PHI — Population Health Intelligence Platform</div>
-  <div class="pc-desc">Abu Dhabi's landmark AI platform — a <strong>national population health digital twin</strong> integrating clinical, lifestyle, and environmental data across the entire emirate. Built with Microsoft. One of the most significant health data initiatives in the MENA region. Currently contributing as Data Architect, advancing the platform's next generation.</div>
-  <div class="pc-tags"><span class="tag">Azure Databricks</span><span class="tag">Microsoft Partnership</span><span class="tag">Delta Lake</span><span class="tag">Population Analytics</span><span class="tag">Medallion Architecture</span></div>
-  <div class="pc-impact teal">World-first national health digital twin · DoH Abu Dhabi · Fractal AI</div>
-</div>
+    <!-- DOH PHI -->
+    <div class="pc doh">
+      <div class="pc-era doh-l">🌍 World-First · DOH Abu Dhabi</div>
+      <span class="pc-icon">🏥</span>
+      <div class="pc-title">DOH PHI — Population Health Intelligence Platform</div>
+      <div class="pc-desc">Abu Dhabi's landmark AI platform — a <strong>national population health digital twin</strong> integrating clinical, lifestyle, and environmental data across the entire emirate. Built with Microsoft. One of the most significant health data initiatives in the MENA region. Currently contributing as Data Architect, advancing the platform's next generation.</div>
+      <div class="pc-tags"><span class="tag">Azure Databricks</span><span class="tag">Microsoft Partnership</span><span class="tag">Delta Lake</span><span class="tag">Population Analytics</span><span class="tag">Medallion Architecture</span></div>
+      <div class="pc-impact teal">World-first national health digital twin · DoH Abu Dhabi · Fractal AI</div>
+    </div>
 
-<!-- SPIKE ALERT -->
-<div class="pc doh">
-  <div class="pc-era doh-l">⚡ Real-Time · DOH Abu Dhabi</div>
-  <span class="pc-icon">🚨</span>
-  <div class="pc-title">DOH Spike Alert Messaging System</div>
-  <div class="pc-desc">Near real-time anomaly detection engine scanning hospital activity across the emirate — distinguishing genuine clinical surges from data quality anomalies and alerting health authorities with immediate context. Designed to enable <strong>proactive, rather than reactive</strong> health governance at scale.</div>
-  <div class="pc-tags"><span class="tag">Databricks Streaming</span><span class="tag">Statistical Detection</span><span class="tag">Alerting Engine</span><span class="tag">Azure</span></div>
-  <div class="pc-impact teal">Proactive hospital intelligence · Emirate-scale alerting · DoH Abu Dhabi</div>
-</div>
+    <!-- SPIKE ALERT -->
+    <div class="pc doh">
+      <div class="pc-era doh-l">⚡ Real-Time · DOH Abu Dhabi</div>
+      <span class="pc-icon">🚨</span>
+      <div class="pc-title">DOH Spike Alert Messaging System</div>
+      <div class="pc-desc">Near real-time anomaly detection engine scanning hospital activity across the emirate — distinguishing genuine clinical surges from data quality anomalies and alerting health authorities with immediate context. Designed to enable <strong>proactive, rather than reactive</strong> health governance at scale.</div>
+      <div class="pc-tags"><span class="tag">Databricks Streaming</span><span class="tag">Statistical Detection</span><span class="tag">Alerting Engine</span><span class="tag">Azure</span></div>
+      <div class="pc-impact teal">Proactive hospital intelligence · Emirate-scale alerting · DoH Abu Dhabi</div>
+    </div>
 
-<!-- CAPACITY ML -->
-<div class="pc">
-  <div class="pc-era fractal-l">📈 ML Forecasting · DOH Abu Dhabi</div>
-  <span class="pc-icon">📊</span>
-  <div class="pc-title">Capacity Management &amp; ML Forecasting</div>
-  <div class="pc-desc">Multi-phase workforce and facility demand forecasting for Abu Dhabi's health system. Led a 10+ member ML team across model development, Medallion architecture migration (SCD Type 2, Delta Catalog), and BI dashboarding for senior health leadership. ADF + Databricks SQL + MLflow.</div>
-  <div class="pc-tags"><span class="tag">ADF</span><span class="tag">Databricks SQL</span><span class="tag">MLflow</span><span class="tag">Medallion</span><span class="tag">Power BI</span></div>
-  <div class="pc-impact">10-member ML team · Emirates workforce intelligence · DoH</div>
-</div>
+    <!-- CAPACITY ML -->
+    <div class="pc">
+      <div class="pc-era fractal-l">📈 ML Forecasting · DOH Abu Dhabi</div>
+      <span class="pc-icon">📊</span>
+      <div class="pc-title">Capacity Management &amp; ML Forecasting</div>
+      <div class="pc-desc">Multi-phase workforce and facility demand forecasting for Abu Dhabi's health system. Led a 10+ member ML team across model development, Medallion architecture migration (SCD Type 2, Delta Catalog), and BI dashboarding for senior health leadership. ADF + Databricks SQL + MLflow.</div>
+      <div class="pc-tags"><span class="tag">ADF</span><span class="tag">Databricks SQL</span><span class="tag">MLflow</span><span class="tag">Medallion</span><span class="tag">Power BI</span></div>
+      <div class="pc-impact">10-member ML team · Emirates workforce intelligence · DoH</div>
+    </div>
 
-<!-- CLAIMS/REVENUE -->
-<div class="pc">
-  <div class="pc-era fractal-l">💊 Revenue Cycle · DOH Abu Dhabi</div>
-  <span class="pc-icon">📋</span>
-  <div class="pc-title">Payer Claims &amp; Revenue Cycle Intelligence</div>
-  <div class="pc-desc">Automated payer claims extraction via Shafafiya web services — submitted amounts, remittances, co-pays, denial codes. Built reconciliation BI dashboards and analysed key revenue cycle KPIs: denial rates, Days in Accounts Receivable (DAR), CAR codes. Direct impact on revenue optimisation for Abu Dhabi healthcare providers.</div>
-  <div class="pc-tags"><span class="tag">Shafafiya</span><span class="tag">Databricks</span><span class="tag">Power BI</span><span class="tag">DAR · CAR Codes</span><span class="tag">Revenue Cycle</span></div>
-  <div class="pc-impact">Automated reconciliation · Revenue cycle KPIs · DoH Abu Dhabi</div>
-</div>
+    <!-- CLAIMS/REVENUE -->
+    <div class="pc">
+      <div class="pc-era fractal-l">💊 Revenue Cycle · DOH Abu Dhabi</div>
+      <span class="pc-icon">📋</span>
+      <div class="pc-title">Payer Claims &amp; Revenue Cycle Intelligence</div>
+      <div class="pc-desc">Automated payer claims extraction via Shafafiya web services — submitted amounts, remittances, co-pays, denial codes. Built reconciliation BI dashboards and analysed key revenue cycle KPIs: denial rates, Days in Accounts Receivable (DAR), CAR codes. Direct impact on revenue optimisation for Abu Dhabi healthcare providers.</div>
+      <div class="pc-tags"><span class="tag">Shafafiya</span><span class="tag">Databricks</span><span class="tag">Power BI</span><span class="tag">DAR · CAR Codes</span><span class="tag">Revenue Cycle</span></div>
+      <div class="pc-impact">Automated reconciliation · Revenue cycle KPIs · DoH Abu Dhabi</div>
+    </div>
 
-<!-- UNITED AIRLINES -->
-<div class="pc">
-  <div class="pc-era fractal-l">✈️ MLOps · United Airlines · USA</div>
-  <span class="pc-icon">🛫</span>
-  <div class="pc-title">United Airlines — 96-Module ML Monitoring</div>
-  <div class="pc-desc">Designed and deployed 96 monitoring modules covering real-time data quality checks, model drift detection, and statistical alerting — enterprise MLOps at one of the world's largest airlines. Python, PySpark, AWS SageMaker, S3, Athena, MLflow. Git-based CI/CD pipelines.</div>
-  <div class="pc-tags"><span class="tag">PySpark</span><span class="tag">AWS SageMaker</span><span class="tag">MLflow</span><span class="tag">S3 · Athena</span><span class="tag">CI/CD</span></div>
-  <div class="pc-impact">96 production monitoring modules · United Airlines · AWS</div>
-</div>
+    <!-- UNITED AIRLINES -->
+    <div class="pc">
+      <div class="pc-era fractal-l">✈️ MLOps · United Airlines · USA</div>
+      <span class="pc-icon">🛫</span>
+      <div class="pc-title">United Airlines — 96-Module ML Monitoring</div>
+      <div class="pc-desc">Designed and deployed 96 monitoring modules covering real-time data quality checks, model drift detection, and statistical alerting — enterprise MLOps at one of the world's largest airlines. Python, PySpark, AWS SageMaker, S3, Athena, MLflow. Git-based CI/CD pipelines.</div>
+      <div class="pc-tags"><span class="tag">PySpark</span><span class="tag">AWS SageMaker</span><span class="tag">MLflow</span><span class="tag">S3 · Athena</span><span class="tag">CI/CD</span></div>
+      <div class="pc-impact">96 production monitoring modules · United Airlines · AWS</div>
+    </div>
 
-<!-- MARS -->
-<div class="pc">
-  <div class="pc-era fractal-l">🐾 Pricing ML · MARS · 3 Countries</div>
-  <span class="pc-icon">🌍</span>
-  <div class="pc-title">MARS Petcare — Global Pricing Simulator</div>
-  <div class="pc-desc">Led ML-driven pricing simulation integrating COGS and Nielsen competitor data across China, Brazil and Mexico — for the world's largest petcare company. ADF pipelines, fuzzy text matching for retailer product alignment, sentiment ML on customer reviews.</div>
-  <div class="pc-tags"><span class="tag">Azure ADF</span><span class="tag">Databricks</span><span class="tag">ML · Nielsen</span><span class="tag">COGS Analytics</span><span class="tag">Sentiment ML</span></div>
-  <div class="pc-impact">3-country rollout (CN · BR · MX) · MARS · Fractal</div>
-</div>
-```
+    <!-- MARS -->
+    <div class="pc">
+      <div class="pc-era fractal-l">🐾 Pricing ML · MARS · 3 Countries</div>
+      <span class="pc-icon">🌍</span>
+      <div class="pc-title">MARS Petcare — Global Pricing Simulator</div>
+      <div class="pc-desc">Led ML-driven pricing simulation integrating COGS and Nielsen competitor data across China, Brazil and Mexico — for the world's largest petcare company. ADF pipelines, fuzzy text matching for retailer product alignment, sentiment ML on customer reviews.</div>
+      <div class="pc-tags"><span class="tag">Azure ADF</span><span class="tag">Databricks</span><span class="tag">ML · Nielsen</span><span class="tag">COGS Analytics</span><span class="tag">Sentiment ML</span></div>
+      <div class="pc-impact">3-country rollout (CN · BR · MX) · MARS · Fractal</div>
+    </div>
 
   </div></div>
 
   <!-- LEGEND -->
-
   <div class="proj-legend rv" style="margin-top:1.8rem;">
     <div class="pl-item"><div class="pl-dot" style="background:var(--gold);"></div> EY LLP flagship</div>
     <div class="pl-item"><div class="pl-dot" style="background:var(--purple);"></div> EY LLP project</div>
@@ -824,7 +940,6 @@ footer{flex-direction:column;gap:.4rem;text-align:center;}
 </section>
 
 <!-- WORLD MAP -->
-
 <section id="world"><div class="wrap">
   <div class="world-grid">
     <div class="rv-l">
@@ -865,16 +980,13 @@ footer{flex-direction:column;gap:.4rem;text-align:center;}
 </div></section>
 
 <!-- AGENTIC AI -->
-
 <!-- AGENTIC AI STACK -->
-
 <section id="agentic"><div class="wrap">
   <div class="eyebrow rv">Architecture · 2024–Present</div>
   <h2 class="sec-title rv">Agentic AI Engineering</h2>
   <p class="sec-sub rv">Building autonomous AI systems that reason, retrieve, and act — not just predict. From LangGraph orchestration to RAG pipelines deployed on production healthcare infrastructure.</p>
 
   <!-- AGENT ARCHITECTURE DIAGRAM -->
-
   <div class="agent-arch rv" style="margin-bottom:3.5rem;">
     <div class="arch-label">How I architect agentic systems</div>
     <div class="arch-flow">
@@ -911,63 +1023,59 @@ footer{flex-direction:column;gap:.4rem;text-align:center;}
   </div>
 
   <!-- TOOL CARDS -->
-
   <div class="agent-grid rv">
 
-```
-<div class="agent-card ac-live">
-  <div class="ac-status live">● Production</div>
-  <div class="ac-icon">⛓️</div>
-  <div class="ac-title">LangChain / LangGraph</div>
-  <div class="ac-desc">Designing multi-step agentic workflows with stateful graph execution — agents that plan, use tools, reflect on outputs, and retry on failure. Applied in Fractal CogentIQ POCs for healthcare query agents across DOH Abu Dhabi data.</div>
-  <div class="ac-tags"><span class="atag">LangGraph</span><span class="atag">State Machines</span><span class="atag">Tool Use</span><span class="atag">Healthcare AI</span></div>
-</div>
+    <div class="agent-card ac-live">
+      <div class="ac-status live">● Production</div>
+      <div class="ac-icon">⛓️</div>
+      <div class="ac-title">LangChain / LangGraph</div>
+      <div class="ac-desc">Designing multi-step agentic workflows with stateful graph execution — agents that plan, use tools, reflect on outputs, and retry on failure. Applied in Fractal CogentIQ POCs for healthcare query agents across DOH Abu Dhabi data.</div>
+      <div class="ac-tags"><span class="atag">LangGraph</span><span class="atag">State Machines</span><span class="atag">Tool Use</span><span class="atag">Healthcare AI</span></div>
+    </div>
 
-<div class="agent-card ac-live">
-  <div class="ac-status live">● Production</div>
-  <div class="ac-icon">📚</div>
-  <div class="ac-title">RAG — Retrieval-Augmented Generation</div>
-  <div class="ac-desc">End-to-end RAG pipeline design: chunking strategies, embedding generation, vector store indexing (FAISS / Azure AI Search), semantic retrieval, and prompt engineering for grounded, citation-aware responses over structured healthcare and policy documents.</div>
-  <div class="ac-tags"><span class="atag">Vector Search</span><span class="atag">Embeddings</span><span class="atag">FAISS</span><span class="atag">Azure AI Search</span><span class="atag">Prompt Engineering</span></div>
-</div>
+    <div class="agent-card ac-live">
+      <div class="ac-status live">● Production</div>
+      <div class="ac-icon">📚</div>
+      <div class="ac-title">RAG — Retrieval-Augmented Generation</div>
+      <div class="ac-desc">End-to-end RAG pipeline design: chunking strategies, embedding generation, vector store indexing (FAISS / Azure AI Search), semantic retrieval, and prompt engineering for grounded, citation-aware responses over structured healthcare and policy documents.</div>
+      <div class="ac-tags"><span class="atag">Vector Search</span><span class="atag">Embeddings</span><span class="atag">FAISS</span><span class="atag">Azure AI Search</span><span class="atag">Prompt Engineering</span></div>
+    </div>
 
-<div class="agent-card ac-live">
-  <div class="ac-status live">● Production</div>
-  <div class="ac-icon">🏗️</div>
-  <div class="ac-title">Azure Databricks · Fractal CogentIQ</div>
-  <div class="ac-desc">Deploying agentic AI on top of enterprise Databricks Lakehouse — Unity Catalog as the governed data layer agents query, Delta Live Tables feeding real-time context, MLflow tracking agent evaluation runs. CogentIQ platform rollout across UAE operations.</div>
-  <div class="ac-tags"><span class="atag">Databricks</span><span class="atag">Unity Catalog</span><span class="atag">MLflow</span><span class="atag">CogentIQ</span></div>
-</div>
+    <div class="agent-card ac-live">
+      <div class="ac-status live">● Production</div>
+      <div class="ac-icon">🏗️</div>
+      <div class="ac-title">Azure Databricks · Fractal CogentIQ</div>
+      <div class="ac-desc">Deploying agentic AI on top of enterprise Databricks Lakehouse — Unity Catalog as the governed data layer agents query, Delta Live Tables feeding real-time context, MLflow tracking agent evaluation runs. CogentIQ platform rollout across UAE operations.</div>
+      <div class="ac-tags"><span class="atag">Databricks</span><span class="atag">Unity Catalog</span><span class="atag">MLflow</span><span class="atag">CogentIQ</span></div>
+    </div>
 
-<div class="agent-card ac-explore">
-  <div class="ac-status explore">◎ Active Research</div>
-  <div class="ac-icon">🤖</div>
-  <div class="ac-title">Claude API · Anthropic</div>
-  <div class="ac-desc">Evaluating Claude's extended context and tool-use capabilities for long-document analysis — particularly healthcare policy PDFs, tax frameworks, and clinical guidelines where context length and reasoning depth outperform shorter-context models.</div>
-  <div class="ac-tags"><span class="atag">Claude 3.5</span><span class="atag">Tool Use</span><span class="atag">Long Context</span><span class="atag">Document AI</span></div>
-</div>
+    <div class="agent-card ac-explore">
+      <div class="ac-status explore">◎ Active Research</div>
+      <div class="ac-icon">🤖</div>
+      <div class="ac-title">Claude API · Anthropic</div>
+      <div class="ac-desc">Evaluating Claude's extended context and tool-use capabilities for long-document analysis — particularly healthcare policy PDFs, tax frameworks, and clinical guidelines where context length and reasoning depth outperform shorter-context models.</div>
+      <div class="ac-tags"><span class="atag">Claude 3.5</span><span class="atag">Tool Use</span><span class="atag">Long Context</span><span class="atag">Document AI</span></div>
+    </div>
 
-<div class="agent-card ac-explore">
-  <div class="ac-status explore">◎ Active Research</div>
-  <div class="ac-icon">🔄</div>
-  <div class="ac-title">n8n · Workflow Orchestration</div>
-  <div class="ac-desc">Exploring n8n for low-code agentic workflow orchestration — connecting LLM calls, webhook triggers, database lookups, and API integrations without heavyweight infrastructure. Relevant for rapid POC delivery in regulated environments where deployment speed matters.</div>
-  <div class="ac-tags"><span class="atag">n8n</span><span class="atag">Workflow Automation</span><span class="atag">Webhooks</span><span class="atag">Low-Code AI</span></div>
-</div>
+    <div class="agent-card ac-explore">
+      <div class="ac-status explore">◎ Active Research</div>
+      <div class="ac-icon">🔄</div>
+      <div class="ac-title">n8n · Workflow Orchestration</div>
+      <div class="ac-desc">Exploring n8n for low-code agentic workflow orchestration — connecting LLM calls, webhook triggers, database lookups, and API integrations without heavyweight infrastructure. Relevant for rapid POC delivery in regulated environments where deployment speed matters.</div>
+      <div class="ac-tags"><span class="atag">n8n</span><span class="atag">Workflow Automation</span><span class="atag">Webhooks</span><span class="atag">Low-Code AI</span></div>
+    </div>
 
-<div class="agent-card ac-explore">
-  <div class="ac-status explore">◎ Active Research</div>
-  <div class="ac-icon">🚀</div>
-  <div class="ac-title">Replit · Rapid AI Prototyping</div>
-  <div class="ac-desc">Using Replit as a fast-iteration environment for AI agent prototyping — spinning up Python-based LangChain agents, testing prompt chains, and demoing RAG pipelines to stakeholders without complex infrastructure. Speed-to-insight for enterprise POCs.</div>
-  <div class="ac-tags"><span class="atag">Replit</span><span class="atag">Python</span><span class="atag">Prototyping</span><span class="atag">POC Delivery</span></div>
-</div>
-```
+    <div class="agent-card ac-explore">
+      <div class="ac-status explore">◎ Active Research</div>
+      <div class="ac-icon">🚀</div>
+      <div class="ac-title">Replit · Rapid AI Prototyping</div>
+      <div class="ac-desc">Using Replit as a fast-iteration environment for AI agent prototyping — spinning up Python-based LangChain agents, testing prompt chains, and demoing RAG pipelines to stakeholders without complex infrastructure. Speed-to-insight for enterprise POCs.</div>
+      <div class="ac-tags"><span class="atag">Replit</span><span class="atag">Python</span><span class="atag">Prototyping</span><span class="atag">POC Delivery</span></div>
+    </div>
 
   </div>
 
   <!-- NLP PRACTITIONER NOTE -->
-
   <div class="nlp-note rv">
     <div class="nlp-note-inner">
       <div class="nlp-left">
@@ -991,7 +1099,6 @@ footer{flex-direction:column;gap:.4rem;text-align:center;}
 </div></section>
 
 <!-- SKILLS -->
-
 <section id="skills"><div class="wrap">
   <div class="eyebrow rv">Technical &amp; Business Depth</div>
   <h2 class="sec-title rv">Core Skills</h2>
@@ -1022,7 +1129,6 @@ footer{flex-direction:column;gap:.4rem;text-align:center;}
 </div></section>
 
 <!-- GOVERNANCE -->
-
 <section id="governance"><div class="wrap">
   <div class="eyebrow rv">Enterprise Grade</div>
   <h2 class="sec-title rv">Data Governance Architecture</h2>
@@ -1038,7 +1144,6 @@ footer{flex-direction:column;gap:.4rem;text-align:center;}
 </div></section>
 
 <!-- SECTORS -->
-
 <section id="sectors">
   <div class="wrap" style="padding-bottom:1rem;">
     <div class="eyebrow rv">Domains</div>
@@ -1057,9 +1162,7 @@ footer{flex-direction:column;gap:.4rem;text-align:center;}
 </section>
 
 <!-- RESEARCH & WRITING -->
-
 <!-- RESEARCH & WRITING -->
-
 <section id="research"><div class="wrap">
   <div class="eyebrow rv">Thought Leadership</div>
   <h2 class="sec-title rv">Research &amp; Writing</h2>
@@ -1067,60 +1170,57 @@ footer{flex-direction:column;gap:.4rem;text-align:center;}
 
   <div class="rw-grid">
 
-```
-<!-- PAPER 1: ESG / CARBON -->
-<div class="rw-card rv">
-  <div class="rw-meta">
-    <span class="rw-tag">ESG · Carbon Policy · Tax</span>
-    <span class="rw-date">2026 · Working Paper</span>
-  </div>
-  <h3 class="rw-title">Predictive Carbon Modelling as a Strategic Tax Governance Tool</h3>
-  <p class="rw-subtitle">Reconciling Industrial Decarbonization with Fiscal Resilience</p>
-  <p class="rw-abstract">The EU's Carbon Border Adjustment Mechanism has transformed carbon accounting from a voluntary ESG disclosure exercise into a direct tax liability. This paper argues that predictive carbon modelling — integrating COGS data, supply chain emissions, and shadow carbon pricing — has become a cornerstone of modern tax governance, not merely a compliance tool. Drawing on a real implementation for a major lubricants manufacturer, the paper demonstrates how a four-layer carbon model can reshape capital allocation, supply chain configuration, and Pillar Two interaction strategies.</p>
-  <div class="rw-insights">
-    <div class="rw-insight-title">Key Arguments</div>
-    <div class="rw-insight">Carbon taxation is tethered to physical reality — unlike profit, emissions cannot be booked into a lower-tax jurisdiction through transfer pricing structures.</div>
-    <div class="rw-insight">A €2M renewable heat investment with a 7-year conventional payback drops to 3.8 years when CBAM liabilities and shadow carbon pricing are incorporated — materially changing the capital decision.</div>
-    <div class="rw-insight">Sourcing base oils from low-carbon Norwegian refineries vs. conventional Middle Eastern facilities generates a 4–7% post-tax margin improvement at EU export scale.</div>
-    <div class="rw-insight">OECD Pillar Two minimum tax interactions with green investment credits create optimization complexity that requires integrated carbon-tax scenario modelling to navigate.</div>
-  </div>
-  <div class="rw-footer">
-    <div class="rw-themes">
-      <span class="rtheme">CBAM</span><span class="rtheme">SASB · IFRS S2</span><span class="rtheme">Shadow Carbon Pricing</span><span class="rtheme">Pillar Two</span><span class="rtheme">Supply Chain Tax</span>
+    <!-- PAPER 1: ESG / CARBON -->
+    <div class="rw-card rv">
+      <div class="rw-meta">
+        <span class="rw-tag">ESG · Carbon Policy · Tax</span>
+        <span class="rw-date">2026 · Working Paper</span>
+      </div>
+      <h3 class="rw-title">Predictive Carbon Modelling as a Strategic Tax Governance Tool</h3>
+      <p class="rw-subtitle">Reconciling Industrial Decarbonization with Fiscal Resilience</p>
+      <p class="rw-abstract">The EU's Carbon Border Adjustment Mechanism has transformed carbon accounting from a voluntary ESG disclosure exercise into a direct tax liability. This paper argues that predictive carbon modelling — integrating COGS data, supply chain emissions, and shadow carbon pricing — has become a cornerstone of modern tax governance, not merely a compliance tool. Drawing on a real implementation for a major lubricants manufacturer, the paper demonstrates how a four-layer carbon model can reshape capital allocation, supply chain configuration, and Pillar Two interaction strategies.</p>
+      <div class="rw-insights">
+        <div class="rw-insight-title">Key Arguments</div>
+        <div class="rw-insight">Carbon taxation is tethered to physical reality — unlike profit, emissions cannot be booked into a lower-tax jurisdiction through transfer pricing structures.</div>
+        <div class="rw-insight">A €2M renewable heat investment with a 7-year conventional payback drops to 3.8 years when CBAM liabilities and shadow carbon pricing are incorporated — materially changing the capital decision.</div>
+        <div class="rw-insight">Sourcing base oils from low-carbon Norwegian refineries vs. conventional Middle Eastern facilities generates a 4–7% post-tax margin improvement at EU export scale.</div>
+        <div class="rw-insight">OECD Pillar Two minimum tax interactions with green investment credits create optimization complexity that requires integrated carbon-tax scenario modelling to navigate.</div>
+      </div>
+      <div class="rw-footer">
+        <div class="rw-themes">
+          <span class="rtheme">CBAM</span><span class="rtheme">SASB · IFRS S2</span><span class="rtheme">Shadow Carbon Pricing</span><span class="rtheme">Pillar Two</span><span class="rtheme">Supply Chain Tax</span>
+        </div>
+        <span class="rw-status">Working Paper · Not Published</span>
+      </div>
     </div>
-    <span class="rw-status">Working Paper · Not Published</span>
-  </div>
-</div>
 
-<!-- PAPER 2: HEALTHCARE AI / TAX -->
-<div class="rw-card rv">
-  <div class="rw-meta">
-    <span class="rw-tag">Healthcare AI · Tax Policy · UAE</span>
-    <span class="rw-date">January 2026 · Working Paper</span>
-  </div>
-  <h3 class="rw-title">Tax Implications of Healthcare Data Localization</h3>
-  <p class="rw-subtitle">Permanent Establishment and Transfer Pricing Challenges in Cloud-Based AI Platforms</p>
-  <p class="rw-abstract">Over seventy jurisdictions now mandate local storage and processing of healthcare data. When AI platforms — like Abu Dhabi's Population Health Intelligence system — must train models exclusively within UAE infrastructure while development teams sit offshore, this geographic separation creates novel permanent establishment and transfer pricing questions that current OECD frameworks were not designed to answer. This paper analyses those gaps using direct implementation experience under Abu Dhabi DOH Circular 147/2022.</p>
-  <div class="rw-insights">
-    <div class="rw-insight-title">Key Arguments</div>
-    <div class="rw-insight">Mandated local AI model training creates stronger permanent establishment arguments than traditional automated server operations — the processing is core to business value, not ancillary.</div>
-    <div class="rw-insight">Cost-plus transfer pricing (10–15% markup) systematically undervalues the UAE data processing contribution; profit-split approaches allocating ~40% to local operations may be more defensible.</div>
-    <div class="rw-insight">Market jurisdictions can make credible claims to taxation rights over AI models trained with their citizens' data — a question OECD Pillar One's Amount A does not adequately address.</div>
-    <div class="rw-insight">Policy recommendation: safe harbors where processing is fully automated, compliance-driven, and below revenue thresholds would reduce uncertainty without sacrificing tax base protection.</div>
-  </div>
-  <div class="rw-footer">
-    <div class="rw-themes">
-      <span class="rtheme">Permanent Establishment</span><span class="rtheme">Transfer Pricing</span><span class="rtheme">UAE Data Sovereignty</span><span class="rtheme">OECD Pillar One</span><span class="rtheme">AI Taxation</span>
+    <!-- PAPER 2: HEALTHCARE AI / TAX -->
+    <div class="rw-card rv">
+      <div class="rw-meta">
+        <span class="rw-tag">Healthcare AI · Tax Policy · UAE</span>
+        <span class="rw-date">January 2026 · Working Paper</span>
+      </div>
+      <h3 class="rw-title">Tax Implications of Healthcare Data Localization</h3>
+      <p class="rw-subtitle">Permanent Establishment and Transfer Pricing Challenges in Cloud-Based AI Platforms</p>
+      <p class="rw-abstract">Over seventy jurisdictions now mandate local storage and processing of healthcare data. When AI platforms — like Abu Dhabi's Population Health Intelligence system — must train models exclusively within UAE infrastructure while development teams sit offshore, this geographic separation creates novel permanent establishment and transfer pricing questions that current OECD frameworks were not designed to answer. This paper analyses those gaps using direct implementation experience under Abu Dhabi DOH Circular 147/2022.</p>
+      <div class="rw-insights">
+        <div class="rw-insight-title">Key Arguments</div>
+        <div class="rw-insight">Mandated local AI model training creates stronger permanent establishment arguments than traditional automated server operations — the processing is core to business value, not ancillary.</div>
+        <div class="rw-insight">Cost-plus transfer pricing (10–15% markup) systematically undervalues the UAE data processing contribution; profit-split approaches allocating ~40% to local operations may be more defensible.</div>
+        <div class="rw-insight">Market jurisdictions can make credible claims to taxation rights over AI models trained with their citizens' data — a question OECD Pillar One's Amount A does not adequately address.</div>
+        <div class="rw-insight">Policy recommendation: safe harbors where processing is fully automated, compliance-driven, and below revenue thresholds would reduce uncertainty without sacrificing tax base protection.</div>
+      </div>
+      <div class="rw-footer">
+        <div class="rw-themes">
+          <span class="rtheme">Permanent Establishment</span><span class="rtheme">Transfer Pricing</span><span class="rtheme">UAE Data Sovereignty</span><span class="rtheme">OECD Pillar One</span><span class="rtheme">AI Taxation</span>
+        </div>
+        <span class="rw-status">Working Paper · Not Published</span>
+      </div>
     </div>
-    <span class="rw-status">Working Paper · Not Published</span>
-  </div>
-</div>
-```
 
   </div>
 
   <!-- RESEARCH INTERESTS BAR -->
-
   <div class="ri-bar rv">
     <div class="ri-label">Research Interests</div>
     <div class="ri-items">
@@ -1136,7 +1236,6 @@ footer{flex-direction:column;gap:.4rem;text-align:center;}
 </div></section>
 
 <!-- TESTIMONIALS -->
-
 <section id="testimonials"><div class="wrap">
   <div class="eyebrow rv">LinkedIn Recommendations</div>
   <h2 class="sec-title rv">What Leaders Say</h2>
@@ -1167,7 +1266,6 @@ footer{flex-direction:column;gap:.4rem;text-align:center;}
 </div></section>
 
 <!-- EXPERIENCE -->
-
 <section id="experience"><div class="wrap">
   <div class="eyebrow rv">Career</div>
   <h2 class="sec-title rv">10 Years of Building</h2>
@@ -1218,7 +1316,6 @@ footer{flex-direction:column;gap:.4rem;text-align:center;}
 </div></section>
 
 <!-- CERTS -->
-
 <section id="certs"><div class="wrap">
   <div class="eyebrow rv">Education &amp; Credentials</div>
   <h2 class="sec-title rv">Certified &amp; Credentialed</h2>
@@ -1237,7 +1334,6 @@ footer{flex-direction:column;gap:.4rem;text-align:center;}
 </div></section>
 
 <!-- CONTACT -->
-
 <section id="contact"><div class="wrap">
   <div class="contact-inner">
     <p class="contact-pre rv">Ready to build something world-class?</p>
@@ -1282,60 +1378,59 @@ footer{flex-direction:column;gap:.4rem;text-align:center;}
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-
 // ═══════════════════════════════════════════════════════════════
-// TO UPDATE RESUME: Search for “data:application/pdf;base64,”
-// Replace the entire base64 string with your new resume’s base64.
+// TO UPDATE RESUME: Search for "data:application/pdf;base64,"
+// Replace the entire base64 string with your new resume's base64.
 // Use: https://base64.guru/converter/encode/pdf to convert.
 // ═══════════════════════════════════════════════════════════════
 
 // CURSOR
-const cd=document.getElementById(‘cd’),cr=document.getElementById(‘cr’);
+const cd=document.getElementById('cd'),cr=document.getElementById('cr');
 let mx=0,my=0,rx=0,ry=0;
-document.addEventListener(‘mousemove’,e=>{mx=e.clientX;my=e.clientY;cd.style.left=mx+‘px’;cd.style.top=my+‘px’;});
-(function loop(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;cr.style.left=rx+‘px’;cr.style.top=ry+‘px’;requestAnimationFrame(loop);})();
-document.querySelectorAll(‘a,button,.pc,.sec-cell,.cert-card,.gov-card,.tcard’).forEach(el=>{el.addEventListener(‘mouseenter’,()=>cr.classList.add(‘h’));el.addEventListener(‘mouseleave’,()=>cr.classList.remove(‘h’));});
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cd.style.left=mx+'px';cd.style.top=my+'px';});
+(function loop(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;cr.style.left=rx+'px';cr.style.top=ry+'px';requestAnimationFrame(loop);})();
+document.querySelectorAll('a,button,.pc,.sec-cell,.cert-card,.gov-card,.tcard').forEach(el=>{el.addEventListener('mouseenter',()=>cr.classList.add('h'));el.addEventListener('mouseleave',()=>cr.classList.remove('h'));});
 
 // SCROLL PROGRESS
-window.addEventListener(‘scroll’,()=>{document.getElementById(‘sp’).style.width=(window.scrollY/(document.body.scrollHeight-innerHeight)*100)+’%’;});
+window.addEventListener('scroll',()=>{document.getElementById('sp').style.width=(window.scrollY/(document.body.scrollHeight-innerHeight)*100)+'%';});
 
 // REVEAL - all visible immediately
-document.querySelectorAll(’.rv,.rv-l,.rv-r’).forEach(el=>{
-el.style.opacity=‘1’;el.style.transform=‘none’;el.classList.add(‘on’);
+document.querySelectorAll('.rv,.rv-l,.rv-r').forEach(el=>{
+  el.style.opacity='1';el.style.transform='none';el.classList.add('on');
 });
 
 // STATS COUNTER
 // Stats — run after loader clears
 // Stats counter — runs on DOMContentLoaded, no observer needed
 function runStats(){
-document.querySelectorAll(’.s-num’).forEach(n=>{
-const t=+n.dataset.v;
-if(!t)return;
-let c=0;const step=Math.max(1,Math.ceil(t/50));
-const si=setInterval(()=>{c=Math.min(c+step,t);n.textContent=c+’+’;if(c>=t)clearInterval(si);},30);
-});
+  document.querySelectorAll('.s-num').forEach(n=>{
+    const t=+n.dataset.v;
+    if(!t)return;
+    let c=0;const step=Math.max(1,Math.ceil(t/50));
+    const si=setInterval(()=>{c=Math.min(c+step,t);n.textContent=c+'+';if(c>=t)clearInterval(si);},30);
+  });
 }
-if(document.readyState===‘loading’){document.addEventListener(‘DOMContentLoaded’,()=>setTimeout(runStats,500));}
+if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',()=>setTimeout(runStats,500));}
 else{setTimeout(runStats,500);}
 
 // SKILL BARS
-function runBars(){document.querySelectorAll(’.sb-fill’).forEach(b=>b.style.width=b.dataset.w+’%’);}
-if(document.readyState===‘loading’){document.addEventListener(‘DOMContentLoaded’,()=>setTimeout(runBars,700));}
+function runBars(){document.querySelectorAll('.sb-fill').forEach(b=>b.style.width=b.dataset.w+'%');}
+if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',()=>setTimeout(runBars,700));}
 else{setTimeout(runBars,700);}
 
 // RADAR CHART
-const rc=document.getElementById(‘rc’);
-if(rc){new Chart(rc,{type:‘radar’,data:{labels:[‘Cloud Architecture’,‘AI/ML & Agents’,‘Healthcare Data’,‘Data Governance’,‘ESG & Business’,‘NLP & Doc AI’],datasets:[{data:[97,85,93,90,84,89],backgroundColor:‘rgba(0,212,196,.07)’,borderColor:‘rgba(0,212,196,.65)’,borderWidth:2,pointBackgroundColor:‘var(–teal)’,pointBorderColor:‘transparent’,pointRadius:4,pointHoverRadius:7}]},options:{responsive:true,maintainAspectRatio:true,scales:{r:{min:60,max:100,angleLines:{color:‘rgba(0,212,196,.1)’},grid:{color:‘rgba(0,212,196,.1)’},pointLabels:{color:’#b8ccd8’,font:{family:”‘Fira Code’”,size:11}},ticks:{display:false}}},plugins:{legend:{display:false}}}});}
+const rc=document.getElementById('rc');
+if(rc){new Chart(rc,{type:'radar',data:{labels:['Cloud Architecture','AI/ML & Agents','Healthcare Data','Data Governance','ESG & Business','NLP & Doc AI'],datasets:[{data:[97,85,93,90,84,89],backgroundColor:'rgba(0,212,196,.07)',borderColor:'rgba(0,212,196,.65)',borderWidth:2,pointBackgroundColor:'var(--teal)',pointBorderColor:'transparent',pointRadius:4,pointHoverRadius:7}]},options:{responsive:true,maintainAspectRatio:true,scales:{r:{min:60,max:100,angleLines:{color:'rgba(0,212,196,.1)'},grid:{color:'rgba(0,212,196,.1)'},pointLabels:{color:'#b8ccd8',font:{family:"'Fira Code'",size:11}},ticks:{display:false}}},plugins:{legend:{display:false}}}});}
 
 // DRAG SCROLL — both rows
-[‘ps-ey’,‘ps-f’].forEach(id=>{
-const el=document.getElementById(id);
-if(!el)return;
-let dn=false,sx,sl;
-el.addEventListener(‘mousedown’,e=>{dn=true;sx=e.pageX-el.offsetLeft;sl=el.scrollLeft;el.style.cursor=‘grabbing’;});
-document.addEventListener(‘mouseup’,()=>{dn=false;if(el)el.style.cursor=‘grab’;});
-el.addEventListener(‘mousemove’,e=>{if(!dn)return;e.preventDefault();el.scrollLeft=sl-(e.pageX-el.offsetLeft-sx)*1.5;});
+['ps-ey','ps-f'].forEach(id=>{
+  const el=document.getElementById(id);
+  if(!el)return;
+  let dn=false,sx,sl;
+  el.addEventListener('mousedown',e=>{dn=true;sx=e.pageX-el.offsetLeft;sl=el.scrollLeft;el.style.cursor='grabbing';});
+  document.addEventListener('mouseup',()=>{dn=false;if(el)el.style.cursor='grab';});
+  el.addEventListener('mousemove',e=>{if(!dn)return;e.preventDefault();el.scrollLeft=sl-(e.pageX-el.offsetLeft-sx)*1.5;});
 });
 
 // CARD 3D TILT
-document.querySelectorAll(’.pc’).forEach(c=>{c.addEventListener(‘mousemove’,e=>{const r=c.getBoundingClientRect();c.style.transform=`perspective(900px) rotateX(${((e.clientY-r.top)-r.height/2)/r.height*5}deg) rotateY(${-((e.clientX-r.left)-r.width/2)/r.width*5}deg) translateY(-
+document.querySelectorAll('.pc').forEach(c=>{c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect();c.style.transform=`perspective(900px) rotateX(${((e.clientY-r.top)-r.height/2)/r.height*5}deg) rotateY(${-((e.clientX-r.left)-r.width/2)/r.width*5}deg) translateY(-
